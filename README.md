@@ -19,7 +19,3 @@ npm run dev
 - Forward chaining simples + “Ver Raciocínio”
 - “Ensinar” uma carreira quando não inferir (persistência via LocalStorage)
 
-## Publicação no GitHub Pages (sem subpath)
-
-Para publicar sem subpath, o repositório precisa se chamar **`d4n13lx.github.io`** (GitHub Pages “User site”).
-
