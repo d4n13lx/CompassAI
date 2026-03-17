@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sistema Especialista de Carreiras (TI)",
-  description: "Forward chaining + motor de explicação (front-end)."
+  title: "Career Compass",
+  description:
+    "Descubra sua carreira em TI com um sistema especialista baseado em regras, com explicação do raciocínio."
 };
 
 export default function RootLayout({
