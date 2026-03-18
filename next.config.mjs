@@ -4,8 +4,8 @@ const nextConfig = {
   output: "export",
 
   // GitHub Pages project site (https://<user>.github.io/<repo>/)
-  basePath: "/Cursor",
-  assetPrefix: "/Cursor/",
+  basePath: "/CompassAI",
+  assetPrefix: "/CompassAI/",
   trailingSlash: true
 };
 
