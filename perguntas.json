@@ -1,0 +1,304 @@
+{
+  "fluxo_carreira_ti_completo": {
+    "1": {
+      "pergunta": "Você tem interesse genuíno em resolver problemas usando tecnologia, software, dados ou gestão de TI?",
+      "sim": 2,
+      "nao": "Procurar uma carreira fora da área de TI",
+      "talvez": 2
+    },
+    "2": {
+      "pergunta": "Você prefere focar em liderança, estratégia de negócios e gestão de equipes de tecnologia em vez de focar na execução técnica do dia a dia?",
+      "sim": 3,
+      "nao": 12,
+      "talvez": 12
+    },
+    "3": {
+      "pergunta": "Seu foco principal é a estratégia tecnológica global da empresa e inovação a longo prazo (C-Level)?",
+      "sim": 4,
+      "nao": 5,
+      "talvez": 5
+    },
+    "4": {
+      "pergunta": "Você prefere alinhar a TI diretamente aos objetivos de negócios e lucros da empresa?",
+      "sim": "CIO (Chief Information Officer)",
+      "nao": "CTO (Chief Technology Officer)",
+      "talvez": "CIO (Chief Information Officer)"
+    },
+    "5": {
+      "pergunta": "Sua liderança estratégica seria focada puramente na governança e uso dos dados da empresa?",
+      "sim": "CDO (Chief Data Officer)",
+      "nao": 6,
+      "talvez": 6
+    },
+    "6": {
+      "pergunta": "Sua gestão é estritamente voltada para a segurança da informação e proteção contra ataques cibernéticos?",
+      "sim": "CISO (Chief Information Security Officer)",
+      "nao": 7,
+      "talvez": 7
+    },
+    "7": {
+      "pergunta": "Você quer ser um executivo liderando múltiplas diretorias de engenharia de software simultaneamente?",
+      "sim": "VP de Engenharia de Software",
+      "nao": 8,
+      "talvez": 8
+    },
+    "8": {
+      "pergunta": "Você prefere atuar como diretor de TI, gerenciando operações diárias, fornecedores e orçamentos?",
+      "sim": "Diretor de TI",
+      "nao": 9,
+      "talvez": 9
+    },
+    "9": {
+      "pergunta": "Você gosta de liderar a visão, o ciclo de vida do produto e decidir o que será construído?",
+      "sim": "Product Manager (Geral/Sênior)",
+      "nao": 10,
+      "talvez": 10
+    },
+    "10": {
+      "pergunta": "Você prefere gerenciar diretamente as equipes e squads que desenvolvem os sistemas e softwares?",
+      "sim": "Gerente de Desenvolvimento de Sistemas",
+      "nao": 11,
+      "talvez": 11
+    },
+    "11": {
+      "pergunta": "Seu foco de gestão é em manter servidores, redes e a arquitetura em nuvem operando?",
+      "sim": "Gerente de Infraestrutura e Nuvem",
+      "nao": "Gerente de Segurança da Informação",
+      "talvez": "Gerente de Infraestrutura e Nuvem"
+    },
+    "12": {
+      "pergunta": "Você é fascinado por matemática, estatística, grande volume de dados e Inteligência Artificial?",
+      "sim": 13,
+      "nao": 22,
+      "talvez": 22
+    },
+    "13": {
+      "pergunta": "Você quer trabalhar diretamente no desenvolvimento de modelos fundacionais de IA e LLMs (como o ChatGPT)?",
+      "sim": "Engenheiro de IA (IA Generativa e LLMs)",
+      "nao": 14,
+      "talvez": 14
+    },
+    "14": {
+      "pergunta": "Você prefere projetar a arquitetura macro e desenhar as soluções corporativas envolvendo Inteligência Artificial?",
+      "sim": "Arquiteto de Soluções de IA",
+      "nao": 15,
+      "talvez": 15
+    },
+    "15": {
+      "pergunta": "Sua paixão é criar algoritmos que ensinam as máquinas a aprenderem com dados históricos?",
+      "sim": "Engenheiro de Machine Learning",
+      "nao": 16,
+      "talvez": 16
+    },
+    "16": {
+      "pergunta": "Você quer focar na infraestrutura e na esteira de implantação/manutenção contínua desses modelos de ML?",
+      "sim": "Engenheiro de MLOps (Machine Learning Operations)",
+      "nao": 17,
+      "talvez": 17
+    },
+    "17": {
+      "pergunta": "Você tem um forte interesse em fazer os computadores entenderem textos, fala e a linguagem humana?",
+      "sim": "Especialista em NLP (Processamento de Linguagem Natural)",
+      "nao": 18,
+      "talvez": 18
+    },
+    "18": {
+      "pergunta": "Você prefere criar modelos que fazem os computadores interpretarem imagens e vídeos?",
+      "sim": "Engenheiro de Visão Computacional",
+      "nao": 19,
+      "talvez": 19
+    },
+    "19": {
+      "pergunta": "Você gosta de construir pipelines, extrair, transformar e carregar enormes bancos de dados?",
+      "sim": "Engenheiro de Dados (Data Engineer)",
+      "nao": 20,
+      "talvez": 20
+    },
+    "20": {
+      "pergunta": "Seu foco é analisar profundamente os dados usando estatística para encontrar padrões ocultos e insights preditivos?",
+      "sim": "Cientista de Dados Sênior",
+      "nao": 21,
+      "talvez": 21
+    },
+    "21": {
+      "pergunta": "Você prefere criar dashboards, painéis e relatórios visuais para apoiar a tomada de decisão em negócios?",
+      "sim": "Analista de Business Intelligence (BI) Sênior",
+      "nao": "AI Consultant (Estrategista de IA)",
+      "talvez": "Analista de Business Intelligence (BI) Sênior"
+    },
+    "22": {
+      "pergunta": "Seu maior interesse é encontrar vulnerabilidades, defender sistemas contra hackers e garantir conformidade?",
+      "sim": 23,
+      "nao": 30,
+      "talvez": 30
+    },
+    "23": {
+      "pergunta": "Você quer atacar ativamente os sistemas da empresa (hackear) para encontrar falhas antes dos criminosos?",
+      "sim": "Pentester (Hacker Ético)",
+      "nao": 24,
+      "talvez": 24
+    },
+    "24": {
+      "pergunta": "Você prefere atuar investigando e rastreando ataques cibernéticos e crimes digitais após eles ocorrerem?",
+      "sim": "Analista de Forense Digital",
+      "nao": 25,
+      "talvez": 25
+    },
+    "25": {
+      "pergunta": "Você quer estar na linha de frente, reagindo a ataques cibernéticos em tempo real e mitigando os danos imediatos?",
+      "sim": "Analista de Resposta a Incidentes",
+      "nao": 26,
+      "talvez": 26
+    },
+    "26": {
+      "pergunta": "Seu foco é desenhar e projetar a arquitetura de segurança de toda a organização em alto nível?",
+      "sim": "Arquiteto de Segurança Cibernética",
+      "nao": 27,
+      "talvez": 27
+    },
+    "27": {
+      "pergunta": "Você quer garantir que o desenvolvimento de software já nasça seguro, integrando segurança nas ferramentas de DevOps?",
+      "sim": "Engenheiro de DevSecOps",
+      "nao": 28,
+      "talvez": 28
+    },
+    "28": {
+      "pergunta": "Seu interesse é focado exclusivamente em proteger ambientes em provedores de nuvem (AWS, Azure, GCP)?",
+      "sim": "Engenheiro de Cloud Security",
+      "nao": 29,
+      "talvez": 29
+    },
+    "29": {
+      "pergunta": "Você prefere garantir que a empresa crie políticas de proteção e siga as leis de privacidade rigorosamente (LGPD/GDPR)?",
+      "sim": "Especialista em Proteção de Dados (DPO)",
+      "nao": "Especialista em Governança, Risco e Compliance (GRC)",
+      "talvez": "Especialista em Governança, Risco e Compliance (GRC)"
+    },
+    "30": {
+      "pergunta": "Você prefere construir, automatizar e manter a infraestrutura, redes e servidores em vez de desenvolver produtos de software?",
+      "sim": 31,
+      "nao": 38,
+      "talvez": 38
+    },
+    "31": {
+      "pergunta": "Você quer ser o principal responsável por projetar a macro arquitetura de soluções em nuvem para clientes corporativos?",
+      "sim": "Arquiteto de Cloud (AWS/Azure/GCP)",
+      "nao": 32,
+      "talvez": 32
+    },
+    "32": {
+      "pergunta": "Seu foco é garantir a máxima disponibilidade de sistemas de alta escala através de automação de engenharia?",
+      "sim": "Engenheiro SRE (Site Reliability Engineer)",
+      "nao": 33,
+      "talvez": 33
+    },
+    "33": {
+      "pergunta": "Você quer criar scripts e automatizar a entrega contínua (CI/CD) para que os desenvolvedores publiquem código mais rápido?",
+      "sim": "Engenheiro DevOps Sênior",
+      "nao": 34,
+      "talvez": 34
+    },
+    "34": {
+      "pergunta": "Você gosta da complexidade de desenhar sistemas gigantescos que rodam distribuídos por vários servidores no mundo?",
+      "sim": "Arquiteto de Sistemas Distribuídos",
+      "nao": 35,
+      "talvez": 35
+    },
+    "35": {
+      "pergunta": "Você prefere construir ferramentas e portais internos para facilitar exclusivamente a vida dos desenvolvedores da sua empresa?",
+      "sim": "Engenheiro de Plataforma (Platform Engineer)",
+      "nao": 36,
+      "talvez": 36
+    },
+    "36": {
+      "pergunta": "Você quer atuar como o elo entre vendas e TI, desenhando a solução técnica customizada para o cliente?",
+      "sim": "Arquiteto de Soluções",
+      "nao": 37,
+      "talvez": 37
+    },
+    "37": {
+      "pergunta": "Você se interessa por arquitetar o processamento de dados nas pontas (como em torres de celular ou locais remotos) em vez do data center central?",
+      "sim": "Especialista em Edge Computing",
+      "nao": "Administrador de Redes Cloud",
+      "talvez": "Administrador de Redes Cloud"
+    },
+    "38": {
+      "pergunta": "Sua vocação principal é escrever código-fonte para criar aplicativos, sistemas, sites ou plataformas de software?",
+      "sim": 39,
+      "nao": 46,
+      "talvez": 46
+    },
+    "39": {
+      "pergunta": "Você gosta da ideia de desenhar a estrutura geral do software e ditar os padrões técnicos para todos os programadores seguirem?",
+      "sim": "Arquiteto de Software",
+      "nao": 40,
+      "talvez": 40
+    },
+    "40": {
+      "pergunta": "Você tem altíssima experiência e quer guiar tecnicamente múltiplos times resolvendo os problemas de código mais críticos, sem ser chefe de ninguém?",
+      "sim": "Staff / Principal Software Engineer",
+      "nao": 41,
+      "talvez": 41
+    },
+    "41": {
+      "pergunta": "Você quer focar estritamente em construir regras de negócios, back-end e banco de dados corporativos (usando Java, .NET ou Go)?",
+      "sim": "Engenheiro de Software Especialista (.NET/Java/Go)",
+      "nao": 42,
+      "talvez": 42
+    },
+    "42": {
+      "pergunta": "Você prefere focar intensamente na interface, fluidez visual e experiência do usuário no navegador (React, Next.js)?",
+      "sim": "Desenvolvedor Front-end Especialista (React/Next.js)",
+      "nao": 43,
+      "talvez": 43
+    },
+    "43": {
+      "pergunta": "Você quer dominar o ciclo completo de desenvolvimento de sistemas, mexendo tanto na interface visual quanto no servidor escondido?",
+      "sim": "Desenvolvedor Full-Stack Sênior",
+      "nao": 44,
+      "talvez": 44
+    },
+    "44": {
+      "pergunta": "Sua paixão exclusiva é criar e publicar aplicativos nativos para celulares iOS ou Android?",
+      "sim": "Desenvolvedor Mobile (iOS/Android) Sênior",
+      "nao": 45,
+      "talvez": 45
+    },
+    "45": {
+      "pergunta": "Você quer programar contratos inteligentes (smart contracts) e trabalhar com criptoativos ou tecnologias web3?",
+      "sim": "Desenvolvedor de Blockchain / Smart Contracts",
+      "nao": "Engenheiro de Sistemas Embarcados",
+      "talvez": "Engenheiro de Sistemas Embarcados"
+    },
+    "46": {
+      "pergunta": "Você quer atuar como a ponte técnica entre a engenharia de software e as necessidades do negócio, definindo cronogramas de lançamento?",
+      "sim": "Technical Product Manager (TPM)",
+      "nao": 47,
+      "talvez": 47
+    },
+    "47": {
+      "pergunta": "Você gosta de facilitar os processos de trabalho da equipe, removendo obstáculos diários e ensinando métodos ágeis (Scrum/Kanban)?",
+      "sim": "Scrum Master / Agile Coach Sênior",
+      "nao": 48,
+      "talvez": 48
+    },
+    "48": {
+      "pergunta": "Seu foco é a implantação, customização técnica e suporte de gigantescos sistemas de gestão empresarial (como SAP ou Oracle)?",
+      "sim": "Especialista em ERP (SAP/Oracle)",
+      "nao": 49,
+      "talvez": 49
+    },
+    "49": {
+      "pergunta": "Você se interessa por conectar dispositivos do mundo físico (sensores industriais, eletrodomésticos, carros) à internet?",
+      "sim": "Especialista em Internet das Coisas (IoT)",
+      "nao": 50,
+      "talvez": 50
+    },
+    "50": {
+      "pergunta": "Você prefere focar em engenharia para garantir que sistemas físicos ou de TI operem confiavelmente ao longo do tempo sem falhas?",
+      "sim": "Engenheiro de Confiabilidade (Reliability Engineer)",
+      "nao": "Analista de Sistemas de Larga Escala",
+      "talvez": "Analista de Sistemas de Larga Escala"
+    }
+  }
+}
