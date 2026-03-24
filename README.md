@@ -10,6 +10,18 @@ Sistema especialista para carreiras em TI com **encadeamento para frente** (fato
 
 Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento` | `conclusao_encontrada` | `esgotado`), `carreiraProposta`, `cadeiaInferencia`.
 
+## Exemplos do projeto
+
+Capturas da interface (pasta `assets/`).
+
+**Tela inicial** — CTA **Começar** e **Ver Raciocínio**.
+
+![Career Compass — tela inicial](assets/1.png)
+
+**Quiz em andamento** — pergunta com Sim / Não / Talvez, e painel **Ver Raciocínio** com encadeamento para frente (fatos) e ranking no servidor.
+
+![Quiz em andamento e raciocínio](assets/2.png)
+
 ## Rotas
 
 ### Páginas (App Router)
@@ -32,6 +44,9 @@ Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento
 
 ```text
 .
+├── assets/                     # Capturas para documentação (exemplos no README)
+│   ├── 1.png
+│   └── 2.png
 ├── app/
 │   ├── admin/page.tsx          # Painel /admin
 │   ├── api/
@@ -119,8 +134,14 @@ npm run dev
 ## Deploy (Vercel)
 
 1. Importe o repositório na Vercel.
-2. Configure `DATABASE_URL` e `MODERATOR_TOKEN` no painel.
-3. Rode `npx prisma db push` uma vez contra o cluster (local ou CI).
+2. Configure `DATABASE_URL` e `MODERATOR_TOKEN` no painel (**Environment**: Production e Preview, se usar deploy de branch).
+3. Rode `npx prisma db push` uma vez contra o cluster (local ou CI) para criar coleções (`QuizSession`, etc.).
+
+### Se `POST /api/quiz` retornar 500
+
+- **MongoDB inacessível**: string `DATABASE_URL` errada, usuário/senha, ou IP bloqueado no Atlas (**Network Access** → permitir `0.0.0.0/0` para testar).
+- **Schema não aplicado**: sem `db push`, o `create` em `QuizSession` pode falhar.
+- **Resposta JSON**: o corpo costuma trazer `error` com uma dica (a Vercel também mostra o stack em *Functions → Logs*).
 
 ## Scripts
 
