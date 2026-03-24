@@ -1,11 +1,15 @@
 export type { QuizAnswer, InferenceChainStep } from "@/lib/inference/types";
-import type { InferenceChainStep, QuizStatus } from "@/lib/inference/types";
+import type { QuizStatus } from "@/lib/inference/types";
+import type { ChainFactWire } from "@/lib/quiz/wire-payload";
+
+export type ChainFactLite = ChainFactWire;
 
 export type RankingItem = {
   careerId: string;
   nome: string;
   probabilidade: number;
-  scoreNormalizado: number;
+  /** Opcional na API compacta; normalizado no cliente para 0 se ausente. */
+  scoreNormalizado?: number;
 };
 
 export type QuizApiPayload = {
@@ -14,5 +18,6 @@ export type QuizApiPayload = {
   rankingAtual: RankingItem[];
   status: QuizStatus;
   carreiraProposta: string | null;
-  cadeiaInferencia: InferenceChainStep[];
+  /** Fatos deduplicados; ausente até carregar (GET reasoning) ou POST com `includeReasoning`. */
+  cadeiaResumo?: ChainFactLite[];
 };

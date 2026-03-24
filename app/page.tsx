@@ -13,7 +13,7 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import { Button } from "@/components/ui/button";
 import type {
-  InferenceChainStep,
+  ChainFactLite,
   QuizAnswer,
   QuizApiPayload,
   RankingItem
@@ -27,27 +27,23 @@ function answerLabel(a: QuizAnswer) {
   return "Talvez / Não sei";
 }
 
-/** Fatos exibidos como a cadeia (ordem do encadeamento): só pergunta + resposta, uma linha por pergunta. */
-function ChainFactsOnly({ steps }: { steps: InferenceChainStep[] }) {
+function normalizeRanking(items: RankingItem[]): RankingItem[] {
+  return items.map((r) => ({
+    ...r,
+    scoreNormalizado: r.scoreNormalizado ?? 0
+  }));
+}
+
+/** Fatos compactos (pergunta + resposta), já deduplicados no servidor. */
+function ChainFactsOnly({ steps }: { steps: ChainFactLite[] }) {
   if (steps.length === 0) {
     return <p className="text-white/50">Nenhum fato na cadeia ainda.</p>;
   }
-  const seen = new Set<string>();
-  const rows: { key: string; pergunta: string; resposta: QuizAnswer }[] = [];
-  for (const s of steps) {
-    if (seen.has(s.perguntaId)) continue;
-    seen.add(s.perguntaId);
-    rows.push({
-      key: s.perguntaId,
-      pergunta: s.textoPergunta ?? s.perguntaId,
-      resposta: s.resposta
-    });
-  }
   return (
     <ol className="mt-2 max-h-64 list-decimal space-y-2 overflow-y-auto pl-5 text-sm text-white/80">
-      {rows.map((r) => (
-        <li key={r.key}>
-          {r.pergunta} — {answerLabel(r.resposta)}
+      {steps.map((r) => (
+        <li key={r.perguntaId}>
+          {r.texto} — {answerLabel(r.resposta)}
         </li>
       ))}
     </ol>
@@ -100,6 +96,44 @@ export default function Page() {
   const [error, setError] = React.useState<string | null>(null);
   const [confirmedCareer, setConfirmedCareer] = React.useState<string | null>(null);
 
+  React.useEffect(() => {
+    if (!showReasoning || !sessionId) return;
+    if (payload?.cadeiaResumo !== undefined) return;
+
+    let cancelled = false;
+    (async () => {
+      try {
+        const r = await fetch(
+          `/api/quiz/reasoning?sessionId=${encodeURIComponent(sessionId)}`,
+          { signal: AbortSignal.timeout(45_000) }
+        );
+        const d = (await r.json()) as {
+          ok?: boolean;
+          cadeiaResumo?: ChainFactLite[];
+          rankingAtual?: RankingItem[];
+        };
+        if (cancelled || !d.ok) return;
+        setPayload((prev) =>
+          prev
+            ? {
+                ...prev,
+                cadeiaResumo: d.cadeiaResumo ?? [],
+                rankingAtual: d.rankingAtual
+                  ? normalizeRanking(d.rankingAtual)
+                  : prev.rankingAtual
+              }
+            : null
+        );
+      } catch {
+        /* rede / timeout: mantém painel sem fatos */
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [showReasoning, sessionId, payload?.cadeiaResumo]);
+
   function applyPayload(data: QuizApiPayload & { ok: boolean; error?: string }) {
     if (!data.ok) {
       throw new Error(data.error ?? "Erro na API");
@@ -107,10 +141,10 @@ export default function Page() {
     setPayload({
       sessionId: data.sessionId,
       proximaPergunta: data.proximaPergunta,
-      rankingAtual: data.rankingAtual,
+      rankingAtual: normalizeRanking(data.rankingAtual),
       status: data.status,
       carreiraProposta: data.carreiraProposta,
-      cadeiaInferencia: data.cadeiaInferencia ?? []
+      cadeiaResumo: "cadeiaResumo" in data ? data.cadeiaResumo : undefined
     });
   }
 
@@ -395,7 +429,7 @@ export default function Page() {
                               <p className="text-xs font-semibold text-white/60">
                                 Encadeamento para frente (fatos)
                               </p>
-                              <ChainFactsOnly steps={payload.cadeiaInferencia} />
+                              <ChainFactsOnly steps={payload.cadeiaResumo ?? []} />
                             </div>
                             <div>
                               <p className="text-xs font-semibold text-white/60">Ranking (servidor)</p>
@@ -449,7 +483,7 @@ export default function Page() {
                           <div className="mt-4 grid gap-4 rounded-2xl border border-white/10 bg-black/30 p-5 text-left text-sm text-white/80 lg:grid-cols-2">
                             <div>
                               <p className="font-semibold text-white">Fatos</p>
-                              <ChainFactsOnly steps={payload?.cadeiaInferencia ?? []} />
+                              <ChainFactsOnly steps={payload?.cadeiaResumo ?? []} />
                             </div>
                             <div>
                               <p className="font-semibold text-white">Ranking</p>
