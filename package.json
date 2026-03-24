@@ -5,11 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "dev:fresh": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\" && next dev",
+    "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "prisma generate && tsc --noEmit",
+    "postinstall": "prisma generate",
+    "db:push": "prisma db push"
   },
   "dependencies": {
+    "@prisma/client": "^6.3.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.6.4",
     "next": "^15.2.3",
@@ -25,6 +30,7 @@
     "eslint": "^9.22.0",
     "eslint-config-next": "^15.2.3",
     "postcss": "^8.5.3",
+    "prisma": "^6.3.1",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.2"
   }

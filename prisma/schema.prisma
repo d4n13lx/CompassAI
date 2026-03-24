@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+/// Sugestão enviada pelo usuário quando o fluxo não encontra carreira (curadoria futura).
+model UserSuggestion {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  career    String
+  /// Histórico de respostas do quiz no momento da sugestão
+  context   Json?
+  createdAt DateTime @default(now())
+  status    String   @default("pending")
+}
+
+/// Estado do quiz (respostas + carreiras descartadas) para o motor probabilístico.
+model QuizSession {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  state     Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+/// Carreiras aprovadas pelo moderador a partir de sugestões de usuário.
+model ModeratorCareer {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  slug         String   @unique
+  name         String
+  source       String   @default("suggestion")
+  suggestionId String?  @db.ObjectId
+  createdAt    DateTime @default(now())
+}
+
+/// Regras aprovadas pelo moderador.
+model ModeratorRule {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  careerId  String   @db.ObjectId
+  questionId String
+  weight    Int
+  createdAt DateTime @default(now())
+}
