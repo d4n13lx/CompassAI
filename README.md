@@ -1,4 +1,5 @@
 # Career Compass
+![Career Compass — início / landing](assets/1.png)
 
 Sistema especialista para carreiras em TI com **encadeamento para frente** (fatos → regras → evidências por carreira), **próxima pergunta escolhida por entropia** e **API no servidor**:
 
@@ -9,12 +10,6 @@ Sistema especialista para carreiras em TI com **encadeamento para frente** (fato
 - **API do quiz**: `POST /api/quiz` com `action`: `start` | `answer` | `discard`.
 
 Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento` | `conclusao_encontrada` | `esgotado`), `carreiraProposta`, `cadeiaInferencia`.
-
-## Imagens do projeto
-
-Capturas em PNG (pasta `assets/`):
-
-![Career Compass — início / landing](assets/1.png)
 
 ![Career Compass — quiz / interface](assets/2.png)
 
