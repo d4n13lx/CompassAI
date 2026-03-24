@@ -4,8 +4,8 @@ Sistema especialista para carreiras em TI com **encadeamento para frente** (fato
 
 - **Encadeamento para frente**: cada resposta satisfez premissas de regras em `data/knowledge.json` (e regras moderadas no MongoDB); a resposta da API inclui `cadeiaInferencia` com a ordem dos disparos.
 - **Seleção por entropia**: entre perguntas ainda não respondidas, escolhe a que minimiza a entropia esperada da distribuição sobre as carreiras (prior Sim / Não / Talvez).
-- **Pesos e ranking**: Sim = +peso, Não = −peso, Talvez = fração do peso; o top 4 usa scores normalizados e probabilidades derivadas.
-- **Sessão**: estado (`respostas` + `carreiras descartadas`) em **MongoDB** (`QuizSession`) ou **memória** em dev sem `DATABASE_URL`.
+- **Pesos e ranking**: Sim = +peso, Não = −peso, Talvez = fração do peso;
+- **Sessão**: estado (`respostas` + `carreiras descartadas`) em **MongoDB** (`QuizSession`).
 - **API do quiz**: `POST /api/quiz` com `action`: `start` | `answer` | `discard`.
 
 Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento` | `conclusao_encontrada` | `esgotado`), `carreiraProposta`, `cadeiaInferencia`.
@@ -18,8 +18,6 @@ Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento
 |----------|------------------------------------------------|
 | `/`      | Quiz, resultado e fluxo “ensinar carreira”.    |
 | `/admin` | Painel de moderação (token `MODERATOR_TOKEN`). |
-
-`/moderador` redireciona permanentemente para `/admin` (ver `next.config.mjs`).
 
 ### API (Route Handlers)
 
@@ -72,8 +70,7 @@ Versões abaixo conforme `package.json` (intervalos `^`; o lockfile fixa resolu�
 | Tecnologia        | Versão (package.json) | Uso |
 |-------------------|------------------------|-----|
 | **Next.js**       | ^15.2.3               | App Router, SSR/SSG, API Routes |
-| **React**         | ^19.0.0               | UI |
-| **React DOM**     | ^19.0.0               | |
+| **React/DOM**         | ^19.0.0               | UI |
 | **TypeScript**    | ^5.8.2                | Tipagem |
 | **Prisma**        | ^6.3.1 (`prisma` + `@prisma/client`) | ORM, MongoDB |
 | **Tailwind CSS**  | ^3.4.17               | Estilos |
@@ -81,18 +78,8 @@ Versões abaixo conforme `package.json` (intervalos `^`; o lockfile fixa resolu�
 | **Autoprefixer**  | ^10.4.21              | Prefixos CSS |
 | **Framer Motion** | ^12.6.4               | Animações (quiz / fundo) |
 | **clsx**          | ^2.1.1                | Classes condicionais |
-| **tailwind-merge**| ^3.3.0                | Merge de classes Tailwind |
-| **ESLint**        | ^9.22.0               | Lint |
-| **eslint-config-next** | ^15.2.3          | Regras Next |
 
 Tipos: `@types/node` ^22.13.10, `@types/react` ^19.0.12, `@types/react-dom` ^19.0.4.
-
-### Referências conceituais
-
-- Sistemas especialista baseados em regras e **encadeamento para frente** (working memory = respostas; regra dispara se a premissa correspondente está satisfeita).
-- **Ganho de informação / entropia** na escolha da próxima pergunta (reduzir incerteza sobre hipóteses = carreiras).
-- **Prisma + MongoDB**: [Connection URLs MongoDB](https://www.prisma.io/docs/orm/overview/databases/mongodb), [Prisma Client](https://www.prisma.io/docs/orm/prisma-client).
-- **Next.js App Router**: [Route Handlers](https://nextjs.org/docs/app/building-your-application/routing/route-handlers), [Environment Variables](https://nextjs.org/docs/app/building-your-application/configuring/environment-variables).
 
 ## Conhecimento
 
@@ -102,19 +89,27 @@ Tipos: `@types/node` ^22.13.10, `@types/react` ^19.0.12, `@types/react-dom` ^19.
 ## Rodar localmente
 
 Requisitos: Node.js 20+, MongoDB Atlas (recomendado) e `DATABASE_URL` no `.env`.
+```
+git clone https://github.com/d4n13lx/CompassAI.git
+```
+### Windows
+```bash
+copy .env.example .env
 
+npm install
+npx prisma db push
+npm run dev
+```
+### Linux
 ```bash
 cp .env.example .env
-# Cole DATABASE_URL e, para /admin, MODERATOR_TOKEN
 
 npm install
 npx prisma db push
 npm run dev
 ```
 
-Sem `DATABASE_URL`, o quiz usa **sessão em memória** (perdida ao reiniciar o servidor); **sugestões** e **painel admin** ainda exigem MongoDB.
-
-## Variáveis
+## Variáveis de Ambiente
 
 | Variável          | Uso |
 |-------------------|-----|
