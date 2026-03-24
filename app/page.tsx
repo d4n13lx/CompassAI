@@ -55,11 +55,22 @@ function ChainFactsOnly({ steps }: { steps: InferenceChainStep[] }) {
 }
 
 async function postQuiz(body: object): Promise<QuizApiPayload & { ok: boolean; error?: string }> {
-  const response = await fetch("/api/quiz", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body)
-  });
+  let response: Response;
+  try {
+    response = await fetch("/api/quiz", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(45_000)
+    });
+  } catch (e) {
+    if (e instanceof Error && e.name === "AbortError") {
+      throw new Error(
+        "Tempo esgotado ao falar com o servidor. Verifique DATABASE_URL / MongoDB na Vercel."
+      );
+    }
+    throw e;
+  }
   const text = await response.text();
   let data: QuizApiPayload & { ok: boolean; error?: string };
   try {

@@ -5,7 +5,7 @@ Sistema especialista para carreiras em TI com **encadeamento para frente** (fato
 - **Encadeamento para frente**: cada resposta satisfez premissas de regras em `data/knowledge.json` (e regras moderadas no MongoDB); a resposta da API inclui `cadeiaInferencia` com a ordem dos disparos.
 - **Seleção por entropia**: entre perguntas ainda não respondidas, escolhe a que minimiza a entropia esperada da distribuição sobre as carreiras (prior Sim / Não / Talvez).
 - **Pesos e ranking**: Sim = +peso, Não = −peso, Talvez = fração do peso;
-- **Sessão**: estado (`respostas` + `carreiras descartadas`) em **MongoDB** (`QuizSession`).
+- **Sessão**: estado (`respostas` + `carreiras descartadas`) em **MongoDB** (`QuizSession`). Em **Vercel** (ou qualquer ambiente serverless) é **obrigatório** `DATABASE_URL` apontando para um MongoDB acessível: sessões só em memória **não** funcionam entre requisições (cada instância tem seu próprio processo).
 - **API do quiz**: `POST /api/quiz` com `action`: `start` | `answer` | `discard`.
 
 Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento` | `conclusao_encontrada` | `esgotado`), `carreiraProposta`, `cadeiaInferencia`.
