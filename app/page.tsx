@@ -60,7 +60,15 @@ async function postQuiz(body: object): Promise<QuizApiPayload & { ok: boolean; e
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body)
   });
-  const data = (await response.json()) as QuizApiPayload & { ok: boolean; error?: string };
+  const text = await response.text();
+  let data: QuizApiPayload & { ok: boolean; error?: string };
+  try {
+    data = (text ? JSON.parse(text) : {}) as QuizApiPayload & { ok: boolean; error?: string };
+  } catch {
+    throw new Error(
+      response.ok ? "Resposta inválida do servidor" : `HTTP ${response.status}: ${text.slice(0, 120)}`
+    );
+  }
   if (!response.ok) {
     throw new Error(data.error ?? `HTTP ${response.status}`);
   }

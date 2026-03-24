@@ -1,12 +1,16 @@
 import { PrismaClient } from "@prisma/client";
 
-const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined };
+/** Interseção: o index `[K: symbol]` do client gerado pode esconder getters nomeados no tipo. */
+type AppPrisma = PrismaClient & {
+  quizSession: any;
+  moderatorCareer: any;
+  moderatorRule: any;
+};
 
-export const prisma: PrismaClient =
-  globalForPrisma.prisma ??
-  new PrismaClient({
-    log: process.env.NODE_ENV === "development" ? ["error", "warn"] : ["error"]
-  });
+const globalForPrisma = globalThis as unknown as { prisma: AppPrisma | undefined };
+
+export const prisma: AppPrisma =
+  globalForPrisma.prisma ?? (new PrismaClient() as AppPrisma);
 
 export type { PrismaClient };
 

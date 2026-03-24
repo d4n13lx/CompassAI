@@ -54,40 +54,47 @@ export async function getEffectiveKnowledgeBase(): Promise<KnowledgeBase> {
     return base;
   }
 
-  const [careers, rules] = (await Promise.all([
-    prisma.moderatorCareer.findMany(),
-    prisma.moderatorRule.findMany()
-  ])) as [ModeratorCareerRow[], ModeratorRuleRow[]];
+  try {
+    const [careers, rules] = (await Promise.all([
+      prisma.moderatorCareer.findMany(),
+      prisma.moderatorRule.findMany()
+    ])) as [ModeratorCareerRow[], ModeratorRuleRow[]];
 
-  const questionMap = new Map(BASE_KB.questions.map((q) => [q.id, q]));
-  const mergedCareers = [
-    ...BASE_KB.careers,
-    ...careers.map((c) => ({
-      id: c.id,
-      name: c.name
-    }))
-  ];
-
-  const mergedRules = [
-    ...BASE_KB.rules,
-    ...rules
-      .filter((r) => questionMap.has(r.questionId))
-      .map((r) => ({
-        id: r.id,
-        careerId: r.careerId,
-        questionId: r.questionId,
-        weight: r.weight
+    const questionMap = new Map(BASE_KB.questions.map((q) => [q.id, q]));
+    const mergedCareers = [
+      ...BASE_KB.careers,
+      ...careers.map((c) => ({
+        id: c.id,
+        name: c.name
       }))
-  ];
+    ];
 
-  const effective: KnowledgeBase = {
-    questions: BASE_KB.questions,
-    careers: mergedCareers,
-    rules: mergedRules
-  };
+    const mergedRules = [
+      ...BASE_KB.rules,
+      ...rules
+        .filter((r) => questionMap.has(r.questionId))
+        .map((r) => ({
+          id: r.id,
+          careerId: r.careerId,
+          questionId: r.questionId,
+          weight: r.weight
+        }))
+    ];
 
-  cache = { value: effective, expiresAt: now + CACHE_TTL_MS };
-  return effective;
+    const effective: KnowledgeBase = {
+      questions: BASE_KB.questions,
+      careers: mergedCareers,
+      rules: mergedRules
+    };
+
+    cache = { value: effective, expiresAt: now + CACHE_TTL_MS };
+    return effective;
+  } catch (err) {
+    console.error("[knowledge-repository] Prisma merge failed; using BASE_KB only", err);
+    const base = BASE_KB;
+    cache = { value: base, expiresAt: now + CACHE_TTL_MS };
+    return base;
+  }
 }
 
 export function invalidateKnowledgeCache() {
