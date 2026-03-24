@@ -3,13 +3,13 @@
 
 Sistema especialista para carreiras em TI com **encadeamento para frente** (fatos → regras → evidências por carreira), **próxima pergunta escolhida por entropia** e **API no servidor**:
 
-- **Encadeamento para frente**: cada resposta satisfez premissas de regras em `data/knowledge.json` (e regras moderadas no MongoDB); a resposta da API inclui `cadeiaInferencia` com a ordem dos disparos.
+- **Encadeamento para frente**: cada resposta satisfez premissas de regras em `data/knowledge.json` (e regras moderadas no MongoDB). O motor mantém a cadeia completa no servidor; na rede, o `POST /api/quiz` envia só o necessário (ver abaixo). Fatos resumidos (`cadeiaResumo`: pergunta + resposta) vêm opcionalmente ou via `GET /api/quiz/reasoning`.
 - **Seleção por entropia**: entre perguntas ainda não respondidas, escolhe a que minimiza a entropia esperada da distribuição sobre as carreiras (prior Sim / Não / Talvez).
 - **Pesos e ranking**: Sim = +peso, Não = −peso, Talvez = fração do peso;
 - **Sessão**: estado (`respostas` + `carreiras descartadas`) em **MongoDB** (`QuizSession`). Em **Vercel** (ou qualquer ambiente serverless) é **obrigatório** `DATABASE_URL` apontando para um MongoDB acessível: sessões só em memória **não** funcionam entre requisições (cada instância tem seu próprio processo).
-- **API do quiz**: `POST /api/quiz` com `action`: `start` | `answer` | `discard`.
+- **API do quiz**: `POST /api/quiz` com `action`: `start` | `answer` | `discard`. Opcional em qualquer ação: `includeReasoning: true` para incluir `cadeiaResumo` (fatos deduplicados) na mesma resposta.
 
-Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento` | `conclusao_encontrada` | `esgotado`), `carreiraProposta`, `cadeiaInferencia`.
+Resposta JSON compacta do `POST`: `sessionId`, `proximaPergunta`, `rankingAtual` (top 4, sem score bruto), `status`, `carreiraProposta`; `cadeiaResumo` só se `includeReasoning` for `true`. Para carregar fatos e ranking após o fluxo normal, use `GET /api/quiz/reasoning?sessionId=...`.
 
 ![Career Compass — quiz / interface](assets/2.png)
 
@@ -26,10 +26,15 @@ Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento
 
 | Método e caminho              | Descrição |
 |-------------------------------|-----------|
-| `POST /api/quiz`              | Corpo JSON: `{ "action": "start" }`, `{ "action": "answer", "sessionId", "questionId", "answer": "yes"\|"no"\|"maybe" }` ou `{ "action": "discard", "sessionId", "careerId" }`. |
+| `POST /api/quiz`              | Corpo JSON: `{ "action": "start" }`, `{ "action": "answer", "sessionId", "questionId", "answer": "yes"\|"no"\|"maybe" }` ou `{ "action": "discard", "sessionId", "careerId" }`. Opcional: `includeReasoning: true`. |
+| `GET /api/quiz/reasoning`     | Query `sessionId`: devolve `cadeiaResumo` e `rankingAtual` compactos para a sessão (útil para “Ver Raciocínio” sem inflar cada POST). |
 | `POST /api/suggestions`       | Sugestão de carreira + contexto (requer `DATABASE_URL`). |
 | `GET /api/moderator/suggestions` | Lista sugestões (header `x-moderator-token`). |
 | `POST /api/moderator/suggestions`| `action`: `approve` ou `delete` + `suggestionId`. |
+| `GET /api/moderator/rules`      | Lista carreiras moderadas, regras e opções de pergunta (mesmo header). |
+| `PATCH /api/moderator/rules`    | `{ "ruleId", "weight" }` (inteiro −50…50). |
+| `POST /api/moderator/rules`     | `{ "careerId", "questionId", "weight" }` (cria ou atualiza par único). |
+| `DELETE /api/moderator/rules`   | Query `ruleId`. |
 
 ## Estrutura principal do projeto
 
@@ -47,8 +52,10 @@ Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento
 │   │   ├── suggestions/
 │   │   │   └── route.ts
 │   │   └── moderator/
-│   │       └── suggestions/
-│   │           └── route.ts
+│   │       ├── suggestions/
+│   │       │   └── route.ts
+│   │       └── rules/
+│   │           └── route.ts    # GET/PATCH/POST; DELETE ?ruleId=
 │   ├── quiz/
 │   │   └── types.ts            # Tipos da UI / contrato do quiz na rede
 │   ├── layout.tsx
@@ -57,6 +64,9 @@ Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento
 ├── components/ui/              # Aurora, Wavy, Button, cn, etc.
 ├── data/
 │   └── knowledge.json          # Perguntas, carreiras, regras (JSON)
+├── perguntas.json              # Árvore de decisão (fundida em knowledge via merge:knowledge)
+├── scripts/
+│   └── merge-perguntas-into-knowledge.mjs
 ├── lib/
 │   ├── quiz/
 │   │   └── wire-payload.ts     # Serialização compacta (cadeiaResumo, ranking)
@@ -131,7 +141,7 @@ npm run dev
 | Variável          | Uso |
 |-------------------|-----|
 | `DATABASE_URL`    | MongoDB (sessões, sugestões, moderação) |
-| `MODERATOR_TOKEN` | Token para `GET`/`POST` `/api/moderator/suggestions` e campo na UI `/admin` (header `x-moderator-token`) |
+| `MODERATOR_TOKEN` | Token para rotas `/api/moderator/*` e UI `/admin` (header `x-moderator-token`) |
 
 ## Deploy (Vercel)
 
