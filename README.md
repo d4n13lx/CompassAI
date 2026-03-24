@@ -12,15 +12,11 @@ Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento
 
 ## Imagens do projeto
 
-Capturas da interface (ficheiros em `assets/`).
+Capturas em PNG (pasta `assets/`):
 
-**Tela inicial** — CTA **Começar** e **Ver Raciocínio**.
+![Career Compass — início / landing](assets/1.png)
 
-![Career Compass — tela inicial](assets/1.png)
-
-**Quiz em andamento** — pergunta com Sim / Não / Talvez, e painel **Ver Raciocínio** com encadeamento para frente (fatos) e ranking no servidor.
-
-![Quiz em andamento e raciocínio](assets/2.png)
+![Career Compass — quiz / interface](assets/2.png)
 
 ## Rotas
 
@@ -44,9 +40,7 @@ Capturas da interface (ficheiros em `assets/`).
 
 ```text
 .
-├── assets/                     # Capturas para documentação (imagens abaixo)
-│   ├── 1.png
-│   └── 2.png
+├── assets/                     # Screenshots .png para documentação (README)
 ├── app/
 │   ├── admin/page.tsx          # Painel /admin
 │   ├── api/
