@@ -10,9 +10,9 @@ Sistema especialista para carreiras em TI com **encadeamento para frente** (fato
 
 Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento` | `conclusao_encontrada` | `esgotado`), `carreiraProposta`, `cadeiaInferencia`.
 
-## Exemplos do projeto
+## Imagens do projeto
 
-Capturas da interface (pasta `assets/`).
+Capturas da interface (ficheiros em `assets/`).
 
 **Tela inicial** — CTA **Começar** e **Ver Raciocínio**.
 
@@ -44,7 +44,7 @@ Capturas da interface (pasta `assets/`).
 
 ```text
 .
-├── assets/                     # Capturas para documentação (exemplos no README)
+├── assets/                     # Capturas para documentação (imagens abaixo)
 │   ├── 1.png
 │   └── 2.png
 ├── app/
