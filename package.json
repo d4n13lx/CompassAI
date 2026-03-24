@@ -11,7 +11,8 @@
     "lint": "next lint",
     "typecheck": "prisma generate && tsc --noEmit",
     "postinstall": "prisma generate",
-    "db:push": "prisma db push"
+    "db:push": "prisma db push",
+    "merge:knowledge": "node scripts/merge-perguntas-into-knowledge.mjs"
   },
   "dependencies": {
     "@prisma/client": "^6.3.1",

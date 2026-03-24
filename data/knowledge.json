@@ -1,60 +1,3270 @@
 {
   "questions": [
-    { "id": "q_ui", "text": "Você gosta de construir interfaces, componentes visuais e experiência no navegador?" },
-    { "id": "q_api", "text": "Você prefere trabalhar com APIs, serviços e lógica de negócio no servidor?" },
-    { "id": "q_data", "text": "Você se interessa por dados, estatística e extração de insights?" },
-    { "id": "q_ml", "text": "Você quer atuar com machine learning e modelos preditivos?" },
-    { "id": "q_sec", "text": "Você se interessa por segurança ofensiva/defensiva e proteção de sistemas?" },
-    { "id": "q_cloud", "text": "Você gosta de infraestrutura, nuvem e automação de deploy?" },
-    { "id": "q_mobile", "text": "Seu foco é desenvolver aplicativos para celular (iOS/Android)?" },
-    { "id": "q_product", "text": "Você prefere definir produto, prioridades e visão em vez de codar o dia todo?" },
-    { "id": "q_embedded", "text": "Você se interessa por sistemas embarcados e hardware próximo ao software?" },
-    { "id": "q_qa", "text": "Você prefere garantir qualidade, testes automatizados e confiabilidade?" },
-    { "id": "q_blockchain", "text": "Você quer trabalhar com blockchain e contratos inteligentes?" },
-    { "id": "q_lead", "text": "Você aspira a liderar times técnicos e decisões de arquitetura?" }
+    {
+      "id": "q_ui",
+      "text": "Você gosta de construir interfaces, componentes visuais e experiência no navegador?"
+    },
+    {
+      "id": "q_api",
+      "text": "Você prefere trabalhar com APIs, serviços e lógica de negócio no servidor?"
+    },
+    {
+      "id": "q_data",
+      "text": "Você se interessa por dados, estatística e extração de insights?"
+    },
+    {
+      "id": "q_ml",
+      "text": "Você quer atuar com machine learning e modelos preditivos?"
+    },
+    {
+      "id": "q_sec",
+      "text": "Você se interessa por segurança ofensiva/defensiva e proteção de sistemas?"
+    },
+    {
+      "id": "q_cloud",
+      "text": "Você gosta de infraestrutura, nuvem e automação de deploy?"
+    },
+    {
+      "id": "q_mobile",
+      "text": "Seu foco é desenvolver aplicativos para celular (iOS/Android)?"
+    },
+    {
+      "id": "q_product",
+      "text": "Você prefere definir produto, prioridades e visão em vez de codar o dia todo?"
+    },
+    {
+      "id": "q_embedded",
+      "text": "Você se interessa por sistemas embarcados e hardware próximo ao software?"
+    },
+    {
+      "id": "q_qa",
+      "text": "Você prefere garantir qualidade, testes automatizados e confiabilidade?"
+    },
+    {
+      "id": "q_blockchain",
+      "text": "Você quer trabalhar com blockchain e contratos inteligentes?"
+    },
+    {
+      "id": "q_lead",
+      "text": "Você aspira a liderar times técnicos e decisões de arquitetura?"
+    },
+    {
+      "id": "q_fluxo_1",
+      "text": "Você tem interesse genuíno em resolver problemas usando tecnologia, software, dados ou gestão de TI?"
+    },
+    {
+      "id": "q_fluxo_2",
+      "text": "Você prefere focar em liderança, estratégia de negócios e gestão de equipes de tecnologia em vez de focar na execução técnica do dia a dia?"
+    },
+    {
+      "id": "q_fluxo_3",
+      "text": "Seu foco principal é a estratégia tecnológica global da empresa e inovação a longo prazo (C-Level)?"
+    },
+    {
+      "id": "q_fluxo_4",
+      "text": "Você prefere alinhar a TI diretamente aos objetivos de negócios e lucros da empresa?"
+    },
+    {
+      "id": "q_fluxo_5",
+      "text": "Sua liderança estratégica seria focada puramente na governança e uso dos dados da empresa?"
+    },
+    {
+      "id": "q_fluxo_6",
+      "text": "Sua gestão é estritamente voltada para a segurança da informação e proteção contra ataques cibernéticos?"
+    },
+    {
+      "id": "q_fluxo_7",
+      "text": "Você quer ser um executivo liderando múltiplas diretorias de engenharia de software simultaneamente?"
+    },
+    {
+      "id": "q_fluxo_8",
+      "text": "Você prefere atuar como diretor de TI, gerenciando operações diárias, fornecedores e orçamentos?"
+    },
+    {
+      "id": "q_fluxo_9",
+      "text": "Você gosta de liderar a visão, o ciclo de vida do produto e decidir o que será construído?"
+    },
+    {
+      "id": "q_fluxo_10",
+      "text": "Você prefere gerenciar diretamente as equipes e squads que desenvolvem os sistemas e softwares?"
+    },
+    {
+      "id": "q_fluxo_11",
+      "text": "Seu foco de gestão é em manter servidores, redes e a arquitetura em nuvem operando?"
+    },
+    {
+      "id": "q_fluxo_12",
+      "text": "Você é fascinado por matemática, estatística, grande volume de dados e Inteligência Artificial?"
+    },
+    {
+      "id": "q_fluxo_13",
+      "text": "Você quer trabalhar diretamente no desenvolvimento de modelos fundacionais de IA e LLMs (como o ChatGPT)?"
+    },
+    {
+      "id": "q_fluxo_14",
+      "text": "Você prefere projetar a arquitetura macro e desenhar as soluções corporativas envolvendo Inteligência Artificial?"
+    },
+    {
+      "id": "q_fluxo_15",
+      "text": "Sua paixão é criar algoritmos que ensinam as máquinas a aprenderem com dados históricos?"
+    },
+    {
+      "id": "q_fluxo_16",
+      "text": "Você quer focar na infraestrutura e na esteira de implantação/manutenção contínua desses modelos de ML?"
+    },
+    {
+      "id": "q_fluxo_17",
+      "text": "Você tem um forte interesse em fazer os computadores entenderem textos, fala e a linguagem humana?"
+    },
+    {
+      "id": "q_fluxo_18",
+      "text": "Você prefere criar modelos que fazem os computadores interpretarem imagens e vídeos?"
+    },
+    {
+      "id": "q_fluxo_19",
+      "text": "Você gosta de construir pipelines, extrair, transformar e carregar enormes bancos de dados?"
+    },
+    {
+      "id": "q_fluxo_20",
+      "text": "Seu foco é analisar profundamente os dados usando estatística para encontrar padrões ocultos e insights preditivos?"
+    },
+    {
+      "id": "q_fluxo_21",
+      "text": "Você prefere criar dashboards, painéis e relatórios visuais para apoiar a tomada de decisão em negócios?"
+    },
+    {
+      "id": "q_fluxo_22",
+      "text": "Seu maior interesse é encontrar vulnerabilidades, defender sistemas contra hackers e garantir conformidade?"
+    },
+    {
+      "id": "q_fluxo_23",
+      "text": "Você quer atacar ativamente os sistemas da empresa (hackear) para encontrar falhas antes dos criminosos?"
+    },
+    {
+      "id": "q_fluxo_24",
+      "text": "Você prefere atuar investigando e rastreando ataques cibernéticos e crimes digitais após eles ocorrerem?"
+    },
+    {
+      "id": "q_fluxo_25",
+      "text": "Você quer estar na linha de frente, reagindo a ataques cibernéticos em tempo real e mitigando os danos imediatos?"
+    },
+    {
+      "id": "q_fluxo_26",
+      "text": "Seu foco é desenhar e projetar a arquitetura de segurança de toda a organização em alto nível?"
+    },
+    {
+      "id": "q_fluxo_27",
+      "text": "Você quer garantir que o desenvolvimento de software já nasça seguro, integrando segurança nas ferramentas de DevOps?"
+    },
+    {
+      "id": "q_fluxo_28",
+      "text": "Seu interesse é focado exclusivamente em proteger ambientes em provedores de nuvem (AWS, Azure, GCP)?"
+    },
+    {
+      "id": "q_fluxo_29",
+      "text": "Você prefere garantir que a empresa crie políticas de proteção e siga as leis de privacidade rigorosamente (LGPD/GDPR)?"
+    },
+    {
+      "id": "q_fluxo_30",
+      "text": "Você prefere construir, automatizar e manter a infraestrutura, redes e servidores em vez de desenvolver produtos de software?"
+    },
+    {
+      "id": "q_fluxo_31",
+      "text": "Você quer ser o principal responsável por projetar a macro arquitetura de soluções em nuvem para clientes corporativos?"
+    },
+    {
+      "id": "q_fluxo_32",
+      "text": "Seu foco é garantir a máxima disponibilidade de sistemas de alta escala através de automação de engenharia?"
+    },
+    {
+      "id": "q_fluxo_33",
+      "text": "Você quer criar scripts e automatizar a entrega contínua (CI/CD) para que os desenvolvedores publiquem código mais rápido?"
+    },
+    {
+      "id": "q_fluxo_34",
+      "text": "Você gosta da complexidade de desenhar sistemas gigantescos que rodam distribuídos por vários servidores no mundo?"
+    },
+    {
+      "id": "q_fluxo_35",
+      "text": "Você prefere construir ferramentas e portais internos para facilitar exclusivamente a vida dos desenvolvedores da sua empresa?"
+    },
+    {
+      "id": "q_fluxo_36",
+      "text": "Você quer atuar como o elo entre vendas e TI, desenhando a solução técnica customizada para o cliente?"
+    },
+    {
+      "id": "q_fluxo_37",
+      "text": "Você se interessa por arquitetar o processamento de dados nas pontas (como em torres de celular ou locais remotos) em vez do data center central?"
+    },
+    {
+      "id": "q_fluxo_38",
+      "text": "Sua vocação principal é escrever código-fonte para criar aplicativos, sistemas, sites ou plataformas de software?"
+    },
+    {
+      "id": "q_fluxo_39",
+      "text": "Você gosta da ideia de desenhar a estrutura geral do software e ditar os padrões técnicos para todos os programadores seguirem?"
+    },
+    {
+      "id": "q_fluxo_40",
+      "text": "Você tem altíssima experiência e quer guiar tecnicamente múltiplos times resolvendo os problemas de código mais críticos, sem ser chefe de ninguém?"
+    },
+    {
+      "id": "q_fluxo_41",
+      "text": "Você quer focar estritamente em construir regras de negócios, back-end e banco de dados corporativos (usando Java, .NET ou Go)?"
+    },
+    {
+      "id": "q_fluxo_42",
+      "text": "Você prefere focar intensamente na interface, fluidez visual e experiência do usuário no navegador (React, Next.js)?"
+    },
+    {
+      "id": "q_fluxo_43",
+      "text": "Você quer dominar o ciclo completo de desenvolvimento de sistemas, mexendo tanto na interface visual quanto no servidor escondido?"
+    },
+    {
+      "id": "q_fluxo_44",
+      "text": "Sua paixão exclusiva é criar e publicar aplicativos nativos para celulares iOS ou Android?"
+    },
+    {
+      "id": "q_fluxo_45",
+      "text": "Você quer programar contratos inteligentes (smart contracts) e trabalhar com criptoativos ou tecnologias web3?"
+    },
+    {
+      "id": "q_fluxo_46",
+      "text": "Você quer atuar como a ponte técnica entre a engenharia de software e as necessidades do negócio, definindo cronogramas de lançamento?"
+    },
+    {
+      "id": "q_fluxo_47",
+      "text": "Você gosta de facilitar os processos de trabalho da equipe, removendo obstáculos diários e ensinando métodos ágeis (Scrum/Kanban)?"
+    },
+    {
+      "id": "q_fluxo_48",
+      "text": "Seu foco é a implantação, customização técnica e suporte de gigantescos sistemas de gestão empresarial (como SAP ou Oracle)?"
+    },
+    {
+      "id": "q_fluxo_49",
+      "text": "Você se interessa por conectar dispositivos do mundo físico (sensores industriais, eletrodomésticos, carros) à internet?"
+    },
+    {
+      "id": "q_fluxo_50",
+      "text": "Você prefere focar em engenharia para garantir que sistemas físicos ou de TI operem confiavelmente ao longo do tempo sem falhas?"
+    }
   ],
   "careers": [
-    { "id": "fe", "name": "Desenvolvedor Front-end" },
-    { "id": "be", "name": "Desenvolvedor Back-end" },
-    { "id": "fs", "name": "Desenvolvedor Full-stack" },
-    { "id": "ds", "name": "Cientista de Dados" },
-    { "id": "de", "name": "Engenheiro de Dados" },
-    { "id": "ml", "name": "Engenheiro de Machine Learning" },
-    { "id": "sec", "name": "Especialista em Segurança da Informação" },
-    { "id": "devops", "name": "Engenheiro DevOps / SRE" },
-    { "id": "mobile", "name": "Desenvolvedor Mobile" },
-    { "id": "pm", "name": "Product Manager / TPM" },
-    { "id": "emb", "name": "Engenheiro de Software Embarcado" },
-    { "id": "qa", "name": "Engenheiro de QA / Testes" },
-    { "id": "bc", "name": "Desenvolvedor Blockchain" },
-    { "id": "lead", "name": "Liderança técnica (Staff/Lead)" }
+    {
+      "id": "fe",
+      "name": "Desenvolvedor Front-end"
+    },
+    {
+      "id": "be",
+      "name": "Desenvolvedor Back-end"
+    },
+    {
+      "id": "fs",
+      "name": "Desenvolvedor Full-stack"
+    },
+    {
+      "id": "ds",
+      "name": "Cientista de Dados"
+    },
+    {
+      "id": "de",
+      "name": "Engenheiro de Dados"
+    },
+    {
+      "id": "ml",
+      "name": "Engenheiro de Machine Learning"
+    },
+    {
+      "id": "sec",
+      "name": "Especialista em Segurança da Informação"
+    },
+    {
+      "id": "devops",
+      "name": "Engenheiro DevOps / SRE"
+    },
+    {
+      "id": "mobile",
+      "name": "Desenvolvedor Mobile"
+    },
+    {
+      "id": "pm",
+      "name": "Product Manager / TPM"
+    },
+    {
+      "id": "emb",
+      "name": "Engenheiro de Software Embarcado"
+    },
+    {
+      "id": "qa",
+      "name": "Engenheiro de QA / Testes"
+    },
+    {
+      "id": "bc",
+      "name": "Desenvolvedor Blockchain"
+    },
+    {
+      "id": "lead",
+      "name": "Liderança técnica (Staff/Lead)"
+    },
+    {
+      "id": "cio_chief_information_officer",
+      "name": "CIO (Chief Information Officer)"
+    },
+    {
+      "id": "cto_chief_technology_officer",
+      "name": "CTO (Chief Technology Officer)"
+    },
+    {
+      "id": "cdo_chief_data_officer",
+      "name": "CDO (Chief Data Officer)"
+    },
+    {
+      "id": "ciso_chief_information_security_officer",
+      "name": "CISO (Chief Information Security Officer)"
+    },
+    {
+      "id": "vp_de_engenharia_de_software",
+      "name": "VP de Engenharia de Software"
+    },
+    {
+      "id": "diretor_de_ti",
+      "name": "Diretor de TI"
+    },
+    {
+      "id": "product_manager_geral_senior",
+      "name": "Product Manager (Geral/Sênior)"
+    },
+    {
+      "id": "gerente_de_desenvolvimento_de_sistemas",
+      "name": "Gerente de Desenvolvimento de Sistemas"
+    },
+    {
+      "id": "gerente_de_infraestrutura_e_nuvem",
+      "name": "Gerente de Infraestrutura e Nuvem"
+    },
+    {
+      "id": "gerente_de_seguranca_da_informacao",
+      "name": "Gerente de Segurança da Informação"
+    },
+    {
+      "id": "engenheiro_de_ia_ia_generativa_e_llms",
+      "name": "Engenheiro de IA (IA Generativa e LLMs)"
+    },
+    {
+      "id": "arquiteto_de_solucoes_de_ia",
+      "name": "Arquiteto de Soluções de IA"
+    },
+    {
+      "id": "engenheiro_de_machine_learning",
+      "name": "Engenheiro de Machine Learning"
+    },
+    {
+      "id": "engenheiro_de_mlops_machine_learning_operations",
+      "name": "Engenheiro de MLOps (Machine Learning Operations)"
+    },
+    {
+      "id": "especialista_em_nlp_processamento_de_linguagem_natural",
+      "name": "Especialista em NLP (Processamento de Linguagem Natural)"
+    },
+    {
+      "id": "engenheiro_de_visao_computacional",
+      "name": "Engenheiro de Visão Computacional"
+    },
+    {
+      "id": "engenheiro_de_dados_data_engineer",
+      "name": "Engenheiro de Dados (Data Engineer)"
+    },
+    {
+      "id": "cientista_de_dados_senior",
+      "name": "Cientista de Dados Sênior"
+    },
+    {
+      "id": "analista_de_business_intelligence_bi_senior",
+      "name": "Analista de Business Intelligence (BI) Sênior"
+    },
+    {
+      "id": "ai_consultant_estrategista_de_ia",
+      "name": "AI Consultant (Estrategista de IA)"
+    },
+    {
+      "id": "pentester_hacker_etico",
+      "name": "Pentester (Hacker Ético)"
+    },
+    {
+      "id": "analista_de_forense_digital",
+      "name": "Analista de Forense Digital"
+    },
+    {
+      "id": "analista_de_resposta_a_incidentes",
+      "name": "Analista de Resposta a Incidentes"
+    },
+    {
+      "id": "arquiteto_de_seguranca_cibernetica",
+      "name": "Arquiteto de Segurança Cibernética"
+    },
+    {
+      "id": "engenheiro_de_devsecops",
+      "name": "Engenheiro de DevSecOps"
+    },
+    {
+      "id": "engenheiro_de_cloud_security",
+      "name": "Engenheiro de Cloud Security"
+    },
+    {
+      "id": "especialista_em_protecao_de_dados_dpo",
+      "name": "Especialista em Proteção de Dados (DPO)"
+    },
+    {
+      "id": "especialista_em_governanca_risco_e_compliance_grc",
+      "name": "Especialista em Governança, Risco e Compliance (GRC)"
+    },
+    {
+      "id": "arquiteto_de_cloud_aws_azure_gcp",
+      "name": "Arquiteto de Cloud (AWS/Azure/GCP)"
+    },
+    {
+      "id": "engenheiro_sre_site_reliability_engineer",
+      "name": "Engenheiro SRE (Site Reliability Engineer)"
+    },
+    {
+      "id": "engenheiro_devops_senior",
+      "name": "Engenheiro DevOps Sênior"
+    },
+    {
+      "id": "arquiteto_de_sistemas_distribuidos",
+      "name": "Arquiteto de Sistemas Distribuídos"
+    },
+    {
+      "id": "engenheiro_de_plataforma_platform_engineer",
+      "name": "Engenheiro de Plataforma (Platform Engineer)"
+    },
+    {
+      "id": "arquiteto_de_solucoes",
+      "name": "Arquiteto de Soluções"
+    },
+    {
+      "id": "especialista_em_edge_computing",
+      "name": "Especialista em Edge Computing"
+    },
+    {
+      "id": "administrador_de_redes_cloud",
+      "name": "Administrador de Redes Cloud"
+    },
+    {
+      "id": "arquiteto_de_software",
+      "name": "Arquiteto de Software"
+    },
+    {
+      "id": "staff_principal_software_engineer",
+      "name": "Staff / Principal Software Engineer"
+    },
+    {
+      "id": "engenheiro_de_software_especialista_net_java_go",
+      "name": "Engenheiro de Software Especialista (.NET/Java/Go)"
+    },
+    {
+      "id": "desenvolvedor_front_end_especialista_react_next_js",
+      "name": "Desenvolvedor Front-end Especialista (React/Next.js)"
+    },
+    {
+      "id": "desenvolvedor_full_stack_senior",
+      "name": "Desenvolvedor Full-Stack Sênior"
+    },
+    {
+      "id": "desenvolvedor_mobile_ios_android_senior",
+      "name": "Desenvolvedor Mobile (iOS/Android) Sênior"
+    },
+    {
+      "id": "desenvolvedor_de_blockchain_smart_contracts",
+      "name": "Desenvolvedor de Blockchain / Smart Contracts"
+    },
+    {
+      "id": "engenheiro_de_sistemas_embarcados",
+      "name": "Engenheiro de Sistemas Embarcados"
+    },
+    {
+      "id": "technical_product_manager_tpm",
+      "name": "Technical Product Manager (TPM)"
+    },
+    {
+      "id": "scrum_master_agile_coach_senior",
+      "name": "Scrum Master / Agile Coach Sênior"
+    },
+    {
+      "id": "especialista_em_erp_sap_oracle",
+      "name": "Especialista em ERP (SAP/Oracle)"
+    },
+    {
+      "id": "especialista_em_internet_das_coisas_iot",
+      "name": "Especialista em Internet das Coisas (IoT)"
+    },
+    {
+      "id": "engenheiro_de_confiabilidade_reliability_engineer",
+      "name": "Engenheiro de Confiabilidade (Reliability Engineer)"
+    },
+    {
+      "id": "analista_de_sistemas_de_larga_escala",
+      "name": "Analista de Sistemas de Larga Escala"
+    },
+    {
+      "id": "procurar_uma_carreira_fora_da_area_de_ti",
+      "name": "Procurar uma carreira fora da área de TI"
+    }
   ],
   "rules": [
-    { "id": "r1", "careerId": "fe", "questionId": "q_ui", "weight": 5 },
-    { "id": "r2", "careerId": "fe", "questionId": "q_api", "weight": 2 },
-    { "id": "r3", "careerId": "be", "questionId": "q_api", "weight": 5 },
-    { "id": "r4", "careerId": "be", "questionId": "q_ui", "weight": 1 },
-    { "id": "r5", "careerId": "fs", "questionId": "q_ui", "weight": 3 },
-    { "id": "r6", "careerId": "fs", "questionId": "q_api", "weight": 3 },
-    { "id": "r7", "careerId": "ds", "questionId": "q_data", "weight": 5 },
-    { "id": "r8", "careerId": "ds", "questionId": "q_ml", "weight": 3 },
-    { "id": "r9", "careerId": "de", "questionId": "q_data", "weight": 5 },
-    { "id": "r10", "careerId": "de", "questionId": "q_cloud", "weight": 3 },
-    { "id": "r11", "careerId": "ml", "questionId": "q_ml", "weight": 5 },
-    { "id": "r12", "careerId": "ml", "questionId": "q_data", "weight": 3 },
-    { "id": "r13", "careerId": "sec", "questionId": "q_sec", "weight": 6 },
-    { "id": "r14", "careerId": "sec", "questionId": "q_cloud", "weight": 2 },
-    { "id": "r15", "careerId": "devops", "questionId": "q_cloud", "weight": 6 },
-    { "id": "r16", "careerId": "devops", "questionId": "q_api", "weight": 2 },
-    { "id": "r17", "careerId": "mobile", "questionId": "q_mobile", "weight": 6 },
-    { "id": "r18", "careerId": "mobile", "questionId": "q_ui", "weight": 2 },
-    { "id": "r19", "careerId": "pm", "questionId": "q_product", "weight": 6 },
-    { "id": "r20", "careerId": "pm", "questionId": "q_lead", "weight": 2 },
-    { "id": "r21", "careerId": "emb", "questionId": "q_embedded", "weight": 6 },
-    { "id": "r22", "careerId": "qa", "questionId": "q_qa", "weight": 6 },
-    { "id": "r23", "careerId": "qa", "questionId": "q_api", "weight": 2 },
-    { "id": "r24", "careerId": "bc", "questionId": "q_blockchain", "weight": 6 },
-    { "id": "r25", "careerId": "lead", "questionId": "q_lead", "weight": 5 },
-    { "id": "r26", "careerId": "lead", "questionId": "q_api", "weight": 2 }
+    {
+      "id": "r1",
+      "careerId": "fe",
+      "questionId": "q_ui",
+      "weight": 5
+    },
+    {
+      "id": "r2",
+      "careerId": "fe",
+      "questionId": "q_api",
+      "weight": 2
+    },
+    {
+      "id": "r3",
+      "careerId": "be",
+      "questionId": "q_api",
+      "weight": 5
+    },
+    {
+      "id": "r4",
+      "careerId": "be",
+      "questionId": "q_ui",
+      "weight": 1
+    },
+    {
+      "id": "r5",
+      "careerId": "fs",
+      "questionId": "q_ui",
+      "weight": 3
+    },
+    {
+      "id": "r6",
+      "careerId": "fs",
+      "questionId": "q_api",
+      "weight": 3
+    },
+    {
+      "id": "r7",
+      "careerId": "ds",
+      "questionId": "q_data",
+      "weight": 5
+    },
+    {
+      "id": "r8",
+      "careerId": "ds",
+      "questionId": "q_ml",
+      "weight": 3
+    },
+    {
+      "id": "r9",
+      "careerId": "de",
+      "questionId": "q_data",
+      "weight": 5
+    },
+    {
+      "id": "r10",
+      "careerId": "de",
+      "questionId": "q_cloud",
+      "weight": 3
+    },
+    {
+      "id": "r11",
+      "careerId": "ml",
+      "questionId": "q_ml",
+      "weight": 5
+    },
+    {
+      "id": "r12",
+      "careerId": "ml",
+      "questionId": "q_data",
+      "weight": 3
+    },
+    {
+      "id": "r13",
+      "careerId": "sec",
+      "questionId": "q_sec",
+      "weight": 6
+    },
+    {
+      "id": "r14",
+      "careerId": "sec",
+      "questionId": "q_cloud",
+      "weight": 2
+    },
+    {
+      "id": "r15",
+      "careerId": "devops",
+      "questionId": "q_cloud",
+      "weight": 6
+    },
+    {
+      "id": "r16",
+      "careerId": "devops",
+      "questionId": "q_api",
+      "weight": 2
+    },
+    {
+      "id": "r17",
+      "careerId": "mobile",
+      "questionId": "q_mobile",
+      "weight": 6
+    },
+    {
+      "id": "r18",
+      "careerId": "mobile",
+      "questionId": "q_ui",
+      "weight": 2
+    },
+    {
+      "id": "r19",
+      "careerId": "pm",
+      "questionId": "q_product",
+      "weight": 6
+    },
+    {
+      "id": "r20",
+      "careerId": "pm",
+      "questionId": "q_lead",
+      "weight": 2
+    },
+    {
+      "id": "r21",
+      "careerId": "emb",
+      "questionId": "q_embedded",
+      "weight": 6
+    },
+    {
+      "id": "r22",
+      "careerId": "qa",
+      "questionId": "q_qa",
+      "weight": 6
+    },
+    {
+      "id": "r23",
+      "careerId": "qa",
+      "questionId": "q_api",
+      "weight": 2
+    },
+    {
+      "id": "r24",
+      "careerId": "bc",
+      "questionId": "q_blockchain",
+      "weight": 6
+    },
+    {
+      "id": "r25",
+      "careerId": "lead",
+      "questionId": "q_lead",
+      "weight": 5
+    },
+    {
+      "id": "r26",
+      "careerId": "lead",
+      "questionId": "q_api",
+      "weight": 2
+    },
+    {
+      "id": "r_fluxo_1",
+      "careerId": "cio_chief_information_officer",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_2",
+      "careerId": "cio_chief_information_officer",
+      "questionId": "q_fluxo_2",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_3",
+      "careerId": "cio_chief_information_officer",
+      "questionId": "q_fluxo_3",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_4",
+      "careerId": "cio_chief_information_officer",
+      "questionId": "q_fluxo_4",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_5",
+      "careerId": "cto_chief_technology_officer",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_6",
+      "careerId": "cto_chief_technology_officer",
+      "questionId": "q_fluxo_2",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_7",
+      "careerId": "cto_chief_technology_officer",
+      "questionId": "q_fluxo_3",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_8",
+      "careerId": "cto_chief_technology_officer",
+      "questionId": "q_fluxo_4",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_9",
+      "careerId": "cdo_chief_data_officer",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_10",
+      "careerId": "cdo_chief_data_officer",
+      "questionId": "q_fluxo_2",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_11",
+      "careerId": "cdo_chief_data_officer",
+      "questionId": "q_fluxo_3",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_12",
+      "careerId": "cdo_chief_data_officer",
+      "questionId": "q_fluxo_5",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_13",
+      "careerId": "ciso_chief_information_security_officer",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_14",
+      "careerId": "ciso_chief_information_security_officer",
+      "questionId": "q_fluxo_2",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_15",
+      "careerId": "ciso_chief_information_security_officer",
+      "questionId": "q_fluxo_3",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_16",
+      "careerId": "ciso_chief_information_security_officer",
+      "questionId": "q_fluxo_5",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_17",
+      "careerId": "ciso_chief_information_security_officer",
+      "questionId": "q_fluxo_6",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_18",
+      "careerId": "vp_de_engenharia_de_software",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_19",
+      "careerId": "vp_de_engenharia_de_software",
+      "questionId": "q_fluxo_2",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_20",
+      "careerId": "vp_de_engenharia_de_software",
+      "questionId": "q_fluxo_3",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_21",
+      "careerId": "vp_de_engenharia_de_software",
+      "questionId": "q_fluxo_5",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_22",
+      "careerId": "vp_de_engenharia_de_software",
+      "questionId": "q_fluxo_6",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_23",
+      "careerId": "vp_de_engenharia_de_software",
+      "questionId": "q_fluxo_7",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_24",
+      "careerId": "diretor_de_ti",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_25",
+      "careerId": "diretor_de_ti",
+      "questionId": "q_fluxo_2",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_26",
+      "careerId": "diretor_de_ti",
+      "questionId": "q_fluxo_3",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_27",
+      "careerId": "diretor_de_ti",
+      "questionId": "q_fluxo_5",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_28",
+      "careerId": "diretor_de_ti",
+      "questionId": "q_fluxo_6",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_29",
+      "careerId": "diretor_de_ti",
+      "questionId": "q_fluxo_7",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_30",
+      "careerId": "diretor_de_ti",
+      "questionId": "q_fluxo_8",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_31",
+      "careerId": "product_manager_geral_senior",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_32",
+      "careerId": "product_manager_geral_senior",
+      "questionId": "q_fluxo_2",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_33",
+      "careerId": "product_manager_geral_senior",
+      "questionId": "q_fluxo_3",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_34",
+      "careerId": "product_manager_geral_senior",
+      "questionId": "q_fluxo_5",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_35",
+      "careerId": "product_manager_geral_senior",
+      "questionId": "q_fluxo_6",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_36",
+      "careerId": "product_manager_geral_senior",
+      "questionId": "q_fluxo_7",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_37",
+      "careerId": "product_manager_geral_senior",
+      "questionId": "q_fluxo_8",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_38",
+      "careerId": "product_manager_geral_senior",
+      "questionId": "q_fluxo_9",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_39",
+      "careerId": "gerente_de_desenvolvimento_de_sistemas",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_40",
+      "careerId": "gerente_de_desenvolvimento_de_sistemas",
+      "questionId": "q_fluxo_2",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_41",
+      "careerId": "gerente_de_desenvolvimento_de_sistemas",
+      "questionId": "q_fluxo_3",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_42",
+      "careerId": "gerente_de_desenvolvimento_de_sistemas",
+      "questionId": "q_fluxo_5",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_43",
+      "careerId": "gerente_de_desenvolvimento_de_sistemas",
+      "questionId": "q_fluxo_6",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_44",
+      "careerId": "gerente_de_desenvolvimento_de_sistemas",
+      "questionId": "q_fluxo_7",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_45",
+      "careerId": "gerente_de_desenvolvimento_de_sistemas",
+      "questionId": "q_fluxo_8",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_46",
+      "careerId": "gerente_de_desenvolvimento_de_sistemas",
+      "questionId": "q_fluxo_9",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_47",
+      "careerId": "gerente_de_desenvolvimento_de_sistemas",
+      "questionId": "q_fluxo_10",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_48",
+      "careerId": "gerente_de_infraestrutura_e_nuvem",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_49",
+      "careerId": "gerente_de_infraestrutura_e_nuvem",
+      "questionId": "q_fluxo_2",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_50",
+      "careerId": "gerente_de_infraestrutura_e_nuvem",
+      "questionId": "q_fluxo_3",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_51",
+      "careerId": "gerente_de_infraestrutura_e_nuvem",
+      "questionId": "q_fluxo_5",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_52",
+      "careerId": "gerente_de_infraestrutura_e_nuvem",
+      "questionId": "q_fluxo_6",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_53",
+      "careerId": "gerente_de_infraestrutura_e_nuvem",
+      "questionId": "q_fluxo_7",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_54",
+      "careerId": "gerente_de_infraestrutura_e_nuvem",
+      "questionId": "q_fluxo_8",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_55",
+      "careerId": "gerente_de_infraestrutura_e_nuvem",
+      "questionId": "q_fluxo_9",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_56",
+      "careerId": "gerente_de_infraestrutura_e_nuvem",
+      "questionId": "q_fluxo_10",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_57",
+      "careerId": "gerente_de_infraestrutura_e_nuvem",
+      "questionId": "q_fluxo_11",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_58",
+      "careerId": "gerente_de_seguranca_da_informacao",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_59",
+      "careerId": "gerente_de_seguranca_da_informacao",
+      "questionId": "q_fluxo_2",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_60",
+      "careerId": "gerente_de_seguranca_da_informacao",
+      "questionId": "q_fluxo_3",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_61",
+      "careerId": "gerente_de_seguranca_da_informacao",
+      "questionId": "q_fluxo_5",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_62",
+      "careerId": "gerente_de_seguranca_da_informacao",
+      "questionId": "q_fluxo_6",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_63",
+      "careerId": "gerente_de_seguranca_da_informacao",
+      "questionId": "q_fluxo_7",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_64",
+      "careerId": "gerente_de_seguranca_da_informacao",
+      "questionId": "q_fluxo_8",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_65",
+      "careerId": "gerente_de_seguranca_da_informacao",
+      "questionId": "q_fluxo_9",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_66",
+      "careerId": "gerente_de_seguranca_da_informacao",
+      "questionId": "q_fluxo_10",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_67",
+      "careerId": "gerente_de_seguranca_da_informacao",
+      "questionId": "q_fluxo_11",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_68",
+      "careerId": "engenheiro_de_ia_ia_generativa_e_llms",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_69",
+      "careerId": "engenheiro_de_ia_ia_generativa_e_llms",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_70",
+      "careerId": "engenheiro_de_ia_ia_generativa_e_llms",
+      "questionId": "q_fluxo_12",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_71",
+      "careerId": "engenheiro_de_ia_ia_generativa_e_llms",
+      "questionId": "q_fluxo_13",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_72",
+      "careerId": "arquiteto_de_solucoes_de_ia",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_73",
+      "careerId": "arquiteto_de_solucoes_de_ia",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_74",
+      "careerId": "arquiteto_de_solucoes_de_ia",
+      "questionId": "q_fluxo_12",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_75",
+      "careerId": "arquiteto_de_solucoes_de_ia",
+      "questionId": "q_fluxo_13",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_76",
+      "careerId": "arquiteto_de_solucoes_de_ia",
+      "questionId": "q_fluxo_14",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_77",
+      "careerId": "engenheiro_de_machine_learning",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_78",
+      "careerId": "engenheiro_de_machine_learning",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_79",
+      "careerId": "engenheiro_de_machine_learning",
+      "questionId": "q_fluxo_12",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_80",
+      "careerId": "engenheiro_de_machine_learning",
+      "questionId": "q_fluxo_13",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_81",
+      "careerId": "engenheiro_de_machine_learning",
+      "questionId": "q_fluxo_14",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_82",
+      "careerId": "engenheiro_de_machine_learning",
+      "questionId": "q_fluxo_15",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_83",
+      "careerId": "engenheiro_de_mlops_machine_learning_operations",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_84",
+      "careerId": "engenheiro_de_mlops_machine_learning_operations",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_85",
+      "careerId": "engenheiro_de_mlops_machine_learning_operations",
+      "questionId": "q_fluxo_12",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_86",
+      "careerId": "engenheiro_de_mlops_machine_learning_operations",
+      "questionId": "q_fluxo_13",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_87",
+      "careerId": "engenheiro_de_mlops_machine_learning_operations",
+      "questionId": "q_fluxo_14",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_88",
+      "careerId": "engenheiro_de_mlops_machine_learning_operations",
+      "questionId": "q_fluxo_15",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_89",
+      "careerId": "engenheiro_de_mlops_machine_learning_operations",
+      "questionId": "q_fluxo_16",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_90",
+      "careerId": "especialista_em_nlp_processamento_de_linguagem_natural",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_91",
+      "careerId": "especialista_em_nlp_processamento_de_linguagem_natural",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_92",
+      "careerId": "especialista_em_nlp_processamento_de_linguagem_natural",
+      "questionId": "q_fluxo_12",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_93",
+      "careerId": "especialista_em_nlp_processamento_de_linguagem_natural",
+      "questionId": "q_fluxo_13",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_94",
+      "careerId": "especialista_em_nlp_processamento_de_linguagem_natural",
+      "questionId": "q_fluxo_14",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_95",
+      "careerId": "especialista_em_nlp_processamento_de_linguagem_natural",
+      "questionId": "q_fluxo_15",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_96",
+      "careerId": "especialista_em_nlp_processamento_de_linguagem_natural",
+      "questionId": "q_fluxo_16",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_97",
+      "careerId": "especialista_em_nlp_processamento_de_linguagem_natural",
+      "questionId": "q_fluxo_17",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_98",
+      "careerId": "engenheiro_de_visao_computacional",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_99",
+      "careerId": "engenheiro_de_visao_computacional",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_100",
+      "careerId": "engenheiro_de_visao_computacional",
+      "questionId": "q_fluxo_12",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_101",
+      "careerId": "engenheiro_de_visao_computacional",
+      "questionId": "q_fluxo_13",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_102",
+      "careerId": "engenheiro_de_visao_computacional",
+      "questionId": "q_fluxo_14",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_103",
+      "careerId": "engenheiro_de_visao_computacional",
+      "questionId": "q_fluxo_15",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_104",
+      "careerId": "engenheiro_de_visao_computacional",
+      "questionId": "q_fluxo_16",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_105",
+      "careerId": "engenheiro_de_visao_computacional",
+      "questionId": "q_fluxo_17",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_106",
+      "careerId": "engenheiro_de_visao_computacional",
+      "questionId": "q_fluxo_18",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_107",
+      "careerId": "engenheiro_de_dados_data_engineer",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_108",
+      "careerId": "engenheiro_de_dados_data_engineer",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_109",
+      "careerId": "engenheiro_de_dados_data_engineer",
+      "questionId": "q_fluxo_12",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_110",
+      "careerId": "engenheiro_de_dados_data_engineer",
+      "questionId": "q_fluxo_13",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_111",
+      "careerId": "engenheiro_de_dados_data_engineer",
+      "questionId": "q_fluxo_14",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_112",
+      "careerId": "engenheiro_de_dados_data_engineer",
+      "questionId": "q_fluxo_15",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_113",
+      "careerId": "engenheiro_de_dados_data_engineer",
+      "questionId": "q_fluxo_16",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_114",
+      "careerId": "engenheiro_de_dados_data_engineer",
+      "questionId": "q_fluxo_17",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_115",
+      "careerId": "engenheiro_de_dados_data_engineer",
+      "questionId": "q_fluxo_18",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_116",
+      "careerId": "engenheiro_de_dados_data_engineer",
+      "questionId": "q_fluxo_19",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_117",
+      "careerId": "cientista_de_dados_senior",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_118",
+      "careerId": "cientista_de_dados_senior",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_119",
+      "careerId": "cientista_de_dados_senior",
+      "questionId": "q_fluxo_12",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_120",
+      "careerId": "cientista_de_dados_senior",
+      "questionId": "q_fluxo_13",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_121",
+      "careerId": "cientista_de_dados_senior",
+      "questionId": "q_fluxo_14",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_122",
+      "careerId": "cientista_de_dados_senior",
+      "questionId": "q_fluxo_15",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_123",
+      "careerId": "cientista_de_dados_senior",
+      "questionId": "q_fluxo_16",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_124",
+      "careerId": "cientista_de_dados_senior",
+      "questionId": "q_fluxo_17",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_125",
+      "careerId": "cientista_de_dados_senior",
+      "questionId": "q_fluxo_18",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_126",
+      "careerId": "cientista_de_dados_senior",
+      "questionId": "q_fluxo_19",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_127",
+      "careerId": "cientista_de_dados_senior",
+      "questionId": "q_fluxo_20",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_128",
+      "careerId": "analista_de_business_intelligence_bi_senior",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_129",
+      "careerId": "analista_de_business_intelligence_bi_senior",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_130",
+      "careerId": "analista_de_business_intelligence_bi_senior",
+      "questionId": "q_fluxo_12",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_131",
+      "careerId": "analista_de_business_intelligence_bi_senior",
+      "questionId": "q_fluxo_13",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_132",
+      "careerId": "analista_de_business_intelligence_bi_senior",
+      "questionId": "q_fluxo_14",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_133",
+      "careerId": "analista_de_business_intelligence_bi_senior",
+      "questionId": "q_fluxo_15",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_134",
+      "careerId": "analista_de_business_intelligence_bi_senior",
+      "questionId": "q_fluxo_16",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_135",
+      "careerId": "analista_de_business_intelligence_bi_senior",
+      "questionId": "q_fluxo_17",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_136",
+      "careerId": "analista_de_business_intelligence_bi_senior",
+      "questionId": "q_fluxo_18",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_137",
+      "careerId": "analista_de_business_intelligence_bi_senior",
+      "questionId": "q_fluxo_19",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_138",
+      "careerId": "analista_de_business_intelligence_bi_senior",
+      "questionId": "q_fluxo_20",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_139",
+      "careerId": "analista_de_business_intelligence_bi_senior",
+      "questionId": "q_fluxo_21",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_140",
+      "careerId": "ai_consultant_estrategista_de_ia",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_141",
+      "careerId": "ai_consultant_estrategista_de_ia",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_142",
+      "careerId": "ai_consultant_estrategista_de_ia",
+      "questionId": "q_fluxo_12",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_143",
+      "careerId": "ai_consultant_estrategista_de_ia",
+      "questionId": "q_fluxo_13",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_144",
+      "careerId": "ai_consultant_estrategista_de_ia",
+      "questionId": "q_fluxo_14",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_145",
+      "careerId": "ai_consultant_estrategista_de_ia",
+      "questionId": "q_fluxo_15",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_146",
+      "careerId": "ai_consultant_estrategista_de_ia",
+      "questionId": "q_fluxo_16",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_147",
+      "careerId": "ai_consultant_estrategista_de_ia",
+      "questionId": "q_fluxo_17",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_148",
+      "careerId": "ai_consultant_estrategista_de_ia",
+      "questionId": "q_fluxo_18",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_149",
+      "careerId": "ai_consultant_estrategista_de_ia",
+      "questionId": "q_fluxo_19",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_150",
+      "careerId": "ai_consultant_estrategista_de_ia",
+      "questionId": "q_fluxo_20",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_151",
+      "careerId": "ai_consultant_estrategista_de_ia",
+      "questionId": "q_fluxo_21",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_152",
+      "careerId": "pentester_hacker_etico",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_153",
+      "careerId": "pentester_hacker_etico",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_154",
+      "careerId": "pentester_hacker_etico",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_155",
+      "careerId": "pentester_hacker_etico",
+      "questionId": "q_fluxo_22",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_156",
+      "careerId": "pentester_hacker_etico",
+      "questionId": "q_fluxo_23",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_157",
+      "careerId": "analista_de_forense_digital",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_158",
+      "careerId": "analista_de_forense_digital",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_159",
+      "careerId": "analista_de_forense_digital",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_160",
+      "careerId": "analista_de_forense_digital",
+      "questionId": "q_fluxo_22",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_161",
+      "careerId": "analista_de_forense_digital",
+      "questionId": "q_fluxo_23",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_162",
+      "careerId": "analista_de_forense_digital",
+      "questionId": "q_fluxo_24",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_163",
+      "careerId": "analista_de_resposta_a_incidentes",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_164",
+      "careerId": "analista_de_resposta_a_incidentes",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_165",
+      "careerId": "analista_de_resposta_a_incidentes",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_166",
+      "careerId": "analista_de_resposta_a_incidentes",
+      "questionId": "q_fluxo_22",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_167",
+      "careerId": "analista_de_resposta_a_incidentes",
+      "questionId": "q_fluxo_23",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_168",
+      "careerId": "analista_de_resposta_a_incidentes",
+      "questionId": "q_fluxo_24",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_169",
+      "careerId": "analista_de_resposta_a_incidentes",
+      "questionId": "q_fluxo_25",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_170",
+      "careerId": "arquiteto_de_seguranca_cibernetica",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_171",
+      "careerId": "arquiteto_de_seguranca_cibernetica",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_172",
+      "careerId": "arquiteto_de_seguranca_cibernetica",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_173",
+      "careerId": "arquiteto_de_seguranca_cibernetica",
+      "questionId": "q_fluxo_22",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_174",
+      "careerId": "arquiteto_de_seguranca_cibernetica",
+      "questionId": "q_fluxo_23",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_175",
+      "careerId": "arquiteto_de_seguranca_cibernetica",
+      "questionId": "q_fluxo_24",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_176",
+      "careerId": "arquiteto_de_seguranca_cibernetica",
+      "questionId": "q_fluxo_25",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_177",
+      "careerId": "arquiteto_de_seguranca_cibernetica",
+      "questionId": "q_fluxo_26",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_178",
+      "careerId": "engenheiro_de_devsecops",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_179",
+      "careerId": "engenheiro_de_devsecops",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_180",
+      "careerId": "engenheiro_de_devsecops",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_181",
+      "careerId": "engenheiro_de_devsecops",
+      "questionId": "q_fluxo_22",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_182",
+      "careerId": "engenheiro_de_devsecops",
+      "questionId": "q_fluxo_23",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_183",
+      "careerId": "engenheiro_de_devsecops",
+      "questionId": "q_fluxo_24",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_184",
+      "careerId": "engenheiro_de_devsecops",
+      "questionId": "q_fluxo_25",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_185",
+      "careerId": "engenheiro_de_devsecops",
+      "questionId": "q_fluxo_26",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_186",
+      "careerId": "engenheiro_de_devsecops",
+      "questionId": "q_fluxo_27",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_187",
+      "careerId": "engenheiro_de_cloud_security",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_188",
+      "careerId": "engenheiro_de_cloud_security",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_189",
+      "careerId": "engenheiro_de_cloud_security",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_190",
+      "careerId": "engenheiro_de_cloud_security",
+      "questionId": "q_fluxo_22",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_191",
+      "careerId": "engenheiro_de_cloud_security",
+      "questionId": "q_fluxo_23",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_192",
+      "careerId": "engenheiro_de_cloud_security",
+      "questionId": "q_fluxo_24",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_193",
+      "careerId": "engenheiro_de_cloud_security",
+      "questionId": "q_fluxo_25",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_194",
+      "careerId": "engenheiro_de_cloud_security",
+      "questionId": "q_fluxo_26",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_195",
+      "careerId": "engenheiro_de_cloud_security",
+      "questionId": "q_fluxo_27",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_196",
+      "careerId": "engenheiro_de_cloud_security",
+      "questionId": "q_fluxo_28",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_197",
+      "careerId": "especialista_em_protecao_de_dados_dpo",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_198",
+      "careerId": "especialista_em_protecao_de_dados_dpo",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_199",
+      "careerId": "especialista_em_protecao_de_dados_dpo",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_200",
+      "careerId": "especialista_em_protecao_de_dados_dpo",
+      "questionId": "q_fluxo_22",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_201",
+      "careerId": "especialista_em_protecao_de_dados_dpo",
+      "questionId": "q_fluxo_23",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_202",
+      "careerId": "especialista_em_protecao_de_dados_dpo",
+      "questionId": "q_fluxo_24",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_203",
+      "careerId": "especialista_em_protecao_de_dados_dpo",
+      "questionId": "q_fluxo_25",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_204",
+      "careerId": "especialista_em_protecao_de_dados_dpo",
+      "questionId": "q_fluxo_26",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_205",
+      "careerId": "especialista_em_protecao_de_dados_dpo",
+      "questionId": "q_fluxo_27",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_206",
+      "careerId": "especialista_em_protecao_de_dados_dpo",
+      "questionId": "q_fluxo_28",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_207",
+      "careerId": "especialista_em_protecao_de_dados_dpo",
+      "questionId": "q_fluxo_29",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_208",
+      "careerId": "especialista_em_governanca_risco_e_compliance_grc",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_209",
+      "careerId": "especialista_em_governanca_risco_e_compliance_grc",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_210",
+      "careerId": "especialista_em_governanca_risco_e_compliance_grc",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_211",
+      "careerId": "especialista_em_governanca_risco_e_compliance_grc",
+      "questionId": "q_fluxo_22",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_212",
+      "careerId": "especialista_em_governanca_risco_e_compliance_grc",
+      "questionId": "q_fluxo_23",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_213",
+      "careerId": "especialista_em_governanca_risco_e_compliance_grc",
+      "questionId": "q_fluxo_24",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_214",
+      "careerId": "especialista_em_governanca_risco_e_compliance_grc",
+      "questionId": "q_fluxo_25",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_215",
+      "careerId": "especialista_em_governanca_risco_e_compliance_grc",
+      "questionId": "q_fluxo_26",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_216",
+      "careerId": "especialista_em_governanca_risco_e_compliance_grc",
+      "questionId": "q_fluxo_27",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_217",
+      "careerId": "especialista_em_governanca_risco_e_compliance_grc",
+      "questionId": "q_fluxo_28",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_218",
+      "careerId": "especialista_em_governanca_risco_e_compliance_grc",
+      "questionId": "q_fluxo_29",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_219",
+      "careerId": "arquiteto_de_cloud_aws_azure_gcp",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_220",
+      "careerId": "arquiteto_de_cloud_aws_azure_gcp",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_221",
+      "careerId": "arquiteto_de_cloud_aws_azure_gcp",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_222",
+      "careerId": "arquiteto_de_cloud_aws_azure_gcp",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_223",
+      "careerId": "arquiteto_de_cloud_aws_azure_gcp",
+      "questionId": "q_fluxo_30",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_224",
+      "careerId": "arquiteto_de_cloud_aws_azure_gcp",
+      "questionId": "q_fluxo_31",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_225",
+      "careerId": "engenheiro_sre_site_reliability_engineer",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_226",
+      "careerId": "engenheiro_sre_site_reliability_engineer",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_227",
+      "careerId": "engenheiro_sre_site_reliability_engineer",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_228",
+      "careerId": "engenheiro_sre_site_reliability_engineer",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_229",
+      "careerId": "engenheiro_sre_site_reliability_engineer",
+      "questionId": "q_fluxo_30",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_230",
+      "careerId": "engenheiro_sre_site_reliability_engineer",
+      "questionId": "q_fluxo_31",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_231",
+      "careerId": "engenheiro_sre_site_reliability_engineer",
+      "questionId": "q_fluxo_32",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_232",
+      "careerId": "engenheiro_devops_senior",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_233",
+      "careerId": "engenheiro_devops_senior",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_234",
+      "careerId": "engenheiro_devops_senior",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_235",
+      "careerId": "engenheiro_devops_senior",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_236",
+      "careerId": "engenheiro_devops_senior",
+      "questionId": "q_fluxo_30",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_237",
+      "careerId": "engenheiro_devops_senior",
+      "questionId": "q_fluxo_31",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_238",
+      "careerId": "engenheiro_devops_senior",
+      "questionId": "q_fluxo_32",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_239",
+      "careerId": "engenheiro_devops_senior",
+      "questionId": "q_fluxo_33",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_240",
+      "careerId": "arquiteto_de_sistemas_distribuidos",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_241",
+      "careerId": "arquiteto_de_sistemas_distribuidos",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_242",
+      "careerId": "arquiteto_de_sistemas_distribuidos",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_243",
+      "careerId": "arquiteto_de_sistemas_distribuidos",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_244",
+      "careerId": "arquiteto_de_sistemas_distribuidos",
+      "questionId": "q_fluxo_30",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_245",
+      "careerId": "arquiteto_de_sistemas_distribuidos",
+      "questionId": "q_fluxo_31",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_246",
+      "careerId": "arquiteto_de_sistemas_distribuidos",
+      "questionId": "q_fluxo_32",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_247",
+      "careerId": "arquiteto_de_sistemas_distribuidos",
+      "questionId": "q_fluxo_33",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_248",
+      "careerId": "arquiteto_de_sistemas_distribuidos",
+      "questionId": "q_fluxo_34",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_249",
+      "careerId": "engenheiro_de_plataforma_platform_engineer",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_250",
+      "careerId": "engenheiro_de_plataforma_platform_engineer",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_251",
+      "careerId": "engenheiro_de_plataforma_platform_engineer",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_252",
+      "careerId": "engenheiro_de_plataforma_platform_engineer",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_253",
+      "careerId": "engenheiro_de_plataforma_platform_engineer",
+      "questionId": "q_fluxo_30",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_254",
+      "careerId": "engenheiro_de_plataforma_platform_engineer",
+      "questionId": "q_fluxo_31",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_255",
+      "careerId": "engenheiro_de_plataforma_platform_engineer",
+      "questionId": "q_fluxo_32",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_256",
+      "careerId": "engenheiro_de_plataforma_platform_engineer",
+      "questionId": "q_fluxo_33",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_257",
+      "careerId": "engenheiro_de_plataforma_platform_engineer",
+      "questionId": "q_fluxo_34",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_258",
+      "careerId": "engenheiro_de_plataforma_platform_engineer",
+      "questionId": "q_fluxo_35",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_259",
+      "careerId": "arquiteto_de_solucoes",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_260",
+      "careerId": "arquiteto_de_solucoes",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_261",
+      "careerId": "arquiteto_de_solucoes",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_262",
+      "careerId": "arquiteto_de_solucoes",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_263",
+      "careerId": "arquiteto_de_solucoes",
+      "questionId": "q_fluxo_30",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_264",
+      "careerId": "arquiteto_de_solucoes",
+      "questionId": "q_fluxo_31",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_265",
+      "careerId": "arquiteto_de_solucoes",
+      "questionId": "q_fluxo_32",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_266",
+      "careerId": "arquiteto_de_solucoes",
+      "questionId": "q_fluxo_33",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_267",
+      "careerId": "arquiteto_de_solucoes",
+      "questionId": "q_fluxo_34",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_268",
+      "careerId": "arquiteto_de_solucoes",
+      "questionId": "q_fluxo_35",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_269",
+      "careerId": "arquiteto_de_solucoes",
+      "questionId": "q_fluxo_36",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_270",
+      "careerId": "especialista_em_edge_computing",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_271",
+      "careerId": "especialista_em_edge_computing",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_272",
+      "careerId": "especialista_em_edge_computing",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_273",
+      "careerId": "especialista_em_edge_computing",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_274",
+      "careerId": "especialista_em_edge_computing",
+      "questionId": "q_fluxo_30",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_275",
+      "careerId": "especialista_em_edge_computing",
+      "questionId": "q_fluxo_31",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_276",
+      "careerId": "especialista_em_edge_computing",
+      "questionId": "q_fluxo_32",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_277",
+      "careerId": "especialista_em_edge_computing",
+      "questionId": "q_fluxo_33",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_278",
+      "careerId": "especialista_em_edge_computing",
+      "questionId": "q_fluxo_34",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_279",
+      "careerId": "especialista_em_edge_computing",
+      "questionId": "q_fluxo_35",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_280",
+      "careerId": "especialista_em_edge_computing",
+      "questionId": "q_fluxo_36",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_281",
+      "careerId": "especialista_em_edge_computing",
+      "questionId": "q_fluxo_37",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_282",
+      "careerId": "administrador_de_redes_cloud",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_283",
+      "careerId": "administrador_de_redes_cloud",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_284",
+      "careerId": "administrador_de_redes_cloud",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_285",
+      "careerId": "administrador_de_redes_cloud",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_286",
+      "careerId": "administrador_de_redes_cloud",
+      "questionId": "q_fluxo_30",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_287",
+      "careerId": "administrador_de_redes_cloud",
+      "questionId": "q_fluxo_31",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_288",
+      "careerId": "administrador_de_redes_cloud",
+      "questionId": "q_fluxo_32",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_289",
+      "careerId": "administrador_de_redes_cloud",
+      "questionId": "q_fluxo_33",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_290",
+      "careerId": "administrador_de_redes_cloud",
+      "questionId": "q_fluxo_34",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_291",
+      "careerId": "administrador_de_redes_cloud",
+      "questionId": "q_fluxo_35",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_292",
+      "careerId": "administrador_de_redes_cloud",
+      "questionId": "q_fluxo_36",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_293",
+      "careerId": "administrador_de_redes_cloud",
+      "questionId": "q_fluxo_37",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_294",
+      "careerId": "arquiteto_de_software",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_295",
+      "careerId": "arquiteto_de_software",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_296",
+      "careerId": "arquiteto_de_software",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_297",
+      "careerId": "arquiteto_de_software",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_298",
+      "careerId": "arquiteto_de_software",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_299",
+      "careerId": "arquiteto_de_software",
+      "questionId": "q_fluxo_38",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_300",
+      "careerId": "arquiteto_de_software",
+      "questionId": "q_fluxo_39",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_301",
+      "careerId": "staff_principal_software_engineer",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_302",
+      "careerId": "staff_principal_software_engineer",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_303",
+      "careerId": "staff_principal_software_engineer",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_304",
+      "careerId": "staff_principal_software_engineer",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_305",
+      "careerId": "staff_principal_software_engineer",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_306",
+      "careerId": "staff_principal_software_engineer",
+      "questionId": "q_fluxo_38",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_307",
+      "careerId": "staff_principal_software_engineer",
+      "questionId": "q_fluxo_39",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_308",
+      "careerId": "staff_principal_software_engineer",
+      "questionId": "q_fluxo_40",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_309",
+      "careerId": "engenheiro_de_software_especialista_net_java_go",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_310",
+      "careerId": "engenheiro_de_software_especialista_net_java_go",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_311",
+      "careerId": "engenheiro_de_software_especialista_net_java_go",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_312",
+      "careerId": "engenheiro_de_software_especialista_net_java_go",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_313",
+      "careerId": "engenheiro_de_software_especialista_net_java_go",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_314",
+      "careerId": "engenheiro_de_software_especialista_net_java_go",
+      "questionId": "q_fluxo_38",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_315",
+      "careerId": "engenheiro_de_software_especialista_net_java_go",
+      "questionId": "q_fluxo_39",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_316",
+      "careerId": "engenheiro_de_software_especialista_net_java_go",
+      "questionId": "q_fluxo_40",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_317",
+      "careerId": "engenheiro_de_software_especialista_net_java_go",
+      "questionId": "q_fluxo_41",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_318",
+      "careerId": "desenvolvedor_front_end_especialista_react_next_js",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_319",
+      "careerId": "desenvolvedor_front_end_especialista_react_next_js",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_320",
+      "careerId": "desenvolvedor_front_end_especialista_react_next_js",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_321",
+      "careerId": "desenvolvedor_front_end_especialista_react_next_js",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_322",
+      "careerId": "desenvolvedor_front_end_especialista_react_next_js",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_323",
+      "careerId": "desenvolvedor_front_end_especialista_react_next_js",
+      "questionId": "q_fluxo_38",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_324",
+      "careerId": "desenvolvedor_front_end_especialista_react_next_js",
+      "questionId": "q_fluxo_39",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_325",
+      "careerId": "desenvolvedor_front_end_especialista_react_next_js",
+      "questionId": "q_fluxo_40",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_326",
+      "careerId": "desenvolvedor_front_end_especialista_react_next_js",
+      "questionId": "q_fluxo_41",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_327",
+      "careerId": "desenvolvedor_front_end_especialista_react_next_js",
+      "questionId": "q_fluxo_42",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_328",
+      "careerId": "desenvolvedor_full_stack_senior",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_329",
+      "careerId": "desenvolvedor_full_stack_senior",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_330",
+      "careerId": "desenvolvedor_full_stack_senior",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_331",
+      "careerId": "desenvolvedor_full_stack_senior",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_332",
+      "careerId": "desenvolvedor_full_stack_senior",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_333",
+      "careerId": "desenvolvedor_full_stack_senior",
+      "questionId": "q_fluxo_38",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_334",
+      "careerId": "desenvolvedor_full_stack_senior",
+      "questionId": "q_fluxo_39",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_335",
+      "careerId": "desenvolvedor_full_stack_senior",
+      "questionId": "q_fluxo_40",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_336",
+      "careerId": "desenvolvedor_full_stack_senior",
+      "questionId": "q_fluxo_41",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_337",
+      "careerId": "desenvolvedor_full_stack_senior",
+      "questionId": "q_fluxo_42",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_338",
+      "careerId": "desenvolvedor_full_stack_senior",
+      "questionId": "q_fluxo_43",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_339",
+      "careerId": "desenvolvedor_mobile_ios_android_senior",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_340",
+      "careerId": "desenvolvedor_mobile_ios_android_senior",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_341",
+      "careerId": "desenvolvedor_mobile_ios_android_senior",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_342",
+      "careerId": "desenvolvedor_mobile_ios_android_senior",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_343",
+      "careerId": "desenvolvedor_mobile_ios_android_senior",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_344",
+      "careerId": "desenvolvedor_mobile_ios_android_senior",
+      "questionId": "q_fluxo_38",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_345",
+      "careerId": "desenvolvedor_mobile_ios_android_senior",
+      "questionId": "q_fluxo_39",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_346",
+      "careerId": "desenvolvedor_mobile_ios_android_senior",
+      "questionId": "q_fluxo_40",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_347",
+      "careerId": "desenvolvedor_mobile_ios_android_senior",
+      "questionId": "q_fluxo_41",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_348",
+      "careerId": "desenvolvedor_mobile_ios_android_senior",
+      "questionId": "q_fluxo_42",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_349",
+      "careerId": "desenvolvedor_mobile_ios_android_senior",
+      "questionId": "q_fluxo_43",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_350",
+      "careerId": "desenvolvedor_mobile_ios_android_senior",
+      "questionId": "q_fluxo_44",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_351",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_352",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_353",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_354",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_355",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_356",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_38",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_357",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_39",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_358",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_40",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_359",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_41",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_360",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_42",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_361",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_43",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_362",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_44",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_363",
+      "careerId": "desenvolvedor_de_blockchain_smart_contracts",
+      "questionId": "q_fluxo_45",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_364",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_365",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_366",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_367",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_368",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_369",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_38",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_370",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_39",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_371",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_40",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_372",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_41",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_373",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_42",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_374",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_43",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_375",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_44",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_376",
+      "careerId": "engenheiro_de_sistemas_embarcados",
+      "questionId": "q_fluxo_45",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_377",
+      "careerId": "technical_product_manager_tpm",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_378",
+      "careerId": "technical_product_manager_tpm",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_379",
+      "careerId": "technical_product_manager_tpm",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_380",
+      "careerId": "technical_product_manager_tpm",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_381",
+      "careerId": "technical_product_manager_tpm",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_382",
+      "careerId": "technical_product_manager_tpm",
+      "questionId": "q_fluxo_38",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_383",
+      "careerId": "technical_product_manager_tpm",
+      "questionId": "q_fluxo_46",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_384",
+      "careerId": "scrum_master_agile_coach_senior",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_385",
+      "careerId": "scrum_master_agile_coach_senior",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_386",
+      "careerId": "scrum_master_agile_coach_senior",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_387",
+      "careerId": "scrum_master_agile_coach_senior",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_388",
+      "careerId": "scrum_master_agile_coach_senior",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_389",
+      "careerId": "scrum_master_agile_coach_senior",
+      "questionId": "q_fluxo_38",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_390",
+      "careerId": "scrum_master_agile_coach_senior",
+      "questionId": "q_fluxo_46",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_391",
+      "careerId": "scrum_master_agile_coach_senior",
+      "questionId": "q_fluxo_47",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_392",
+      "careerId": "especialista_em_erp_sap_oracle",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_393",
+      "careerId": "especialista_em_erp_sap_oracle",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_394",
+      "careerId": "especialista_em_erp_sap_oracle",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_395",
+      "careerId": "especialista_em_erp_sap_oracle",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_396",
+      "careerId": "especialista_em_erp_sap_oracle",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_397",
+      "careerId": "especialista_em_erp_sap_oracle",
+      "questionId": "q_fluxo_38",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_398",
+      "careerId": "especialista_em_erp_sap_oracle",
+      "questionId": "q_fluxo_46",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_399",
+      "careerId": "especialista_em_erp_sap_oracle",
+      "questionId": "q_fluxo_47",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_400",
+      "careerId": "especialista_em_erp_sap_oracle",
+      "questionId": "q_fluxo_48",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_401",
+      "careerId": "especialista_em_internet_das_coisas_iot",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_402",
+      "careerId": "especialista_em_internet_das_coisas_iot",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_403",
+      "careerId": "especialista_em_internet_das_coisas_iot",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_404",
+      "careerId": "especialista_em_internet_das_coisas_iot",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_405",
+      "careerId": "especialista_em_internet_das_coisas_iot",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_406",
+      "careerId": "especialista_em_internet_das_coisas_iot",
+      "questionId": "q_fluxo_38",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_407",
+      "careerId": "especialista_em_internet_das_coisas_iot",
+      "questionId": "q_fluxo_46",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_408",
+      "careerId": "especialista_em_internet_das_coisas_iot",
+      "questionId": "q_fluxo_47",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_409",
+      "careerId": "especialista_em_internet_das_coisas_iot",
+      "questionId": "q_fluxo_48",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_410",
+      "careerId": "especialista_em_internet_das_coisas_iot",
+      "questionId": "q_fluxo_49",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_411",
+      "careerId": "engenheiro_de_confiabilidade_reliability_engineer",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_412",
+      "careerId": "engenheiro_de_confiabilidade_reliability_engineer",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_413",
+      "careerId": "engenheiro_de_confiabilidade_reliability_engineer",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_414",
+      "careerId": "engenheiro_de_confiabilidade_reliability_engineer",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_415",
+      "careerId": "engenheiro_de_confiabilidade_reliability_engineer",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_416",
+      "careerId": "engenheiro_de_confiabilidade_reliability_engineer",
+      "questionId": "q_fluxo_38",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_417",
+      "careerId": "engenheiro_de_confiabilidade_reliability_engineer",
+      "questionId": "q_fluxo_46",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_418",
+      "careerId": "engenheiro_de_confiabilidade_reliability_engineer",
+      "questionId": "q_fluxo_47",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_419",
+      "careerId": "engenheiro_de_confiabilidade_reliability_engineer",
+      "questionId": "q_fluxo_48",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_420",
+      "careerId": "engenheiro_de_confiabilidade_reliability_engineer",
+      "questionId": "q_fluxo_49",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_421",
+      "careerId": "engenheiro_de_confiabilidade_reliability_engineer",
+      "questionId": "q_fluxo_50",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_422",
+      "careerId": "analista_de_sistemas_de_larga_escala",
+      "questionId": "q_fluxo_1",
+      "weight": 5
+    },
+    {
+      "id": "r_fluxo_423",
+      "careerId": "analista_de_sistemas_de_larga_escala",
+      "questionId": "q_fluxo_2",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_424",
+      "careerId": "analista_de_sistemas_de_larga_escala",
+      "questionId": "q_fluxo_12",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_425",
+      "careerId": "analista_de_sistemas_de_larga_escala",
+      "questionId": "q_fluxo_22",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_426",
+      "careerId": "analista_de_sistemas_de_larga_escala",
+      "questionId": "q_fluxo_30",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_427",
+      "careerId": "analista_de_sistemas_de_larga_escala",
+      "questionId": "q_fluxo_38",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_428",
+      "careerId": "analista_de_sistemas_de_larga_escala",
+      "questionId": "q_fluxo_46",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_429",
+      "careerId": "analista_de_sistemas_de_larga_escala",
+      "questionId": "q_fluxo_47",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_430",
+      "careerId": "analista_de_sistemas_de_larga_escala",
+      "questionId": "q_fluxo_48",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_431",
+      "careerId": "analista_de_sistemas_de_larga_escala",
+      "questionId": "q_fluxo_49",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_432",
+      "careerId": "analista_de_sistemas_de_larga_escala",
+      "questionId": "q_fluxo_50",
+      "weight": -5
+    },
+    {
+      "id": "r_fluxo_433",
+      "careerId": "procurar_uma_carreira_fora_da_area_de_ti",
+      "questionId": "q_fluxo_1",
+      "weight": -5
+    }
   ]
 }

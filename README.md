@@ -48,6 +48,9 @@ Resposta JSON inclui: `proximaPergunta`, `rankingAtual`, `status` (`em_andamento
 │   └── globals.css
 ├── components/ui/              # Aurora, Wavy, Button, cn, etc.
 ├── data/knowledge.json         # Perguntas, carreiras, regras (JSON)
+├── perguntas.json              # Árvore de decisão (fundida em knowledge via merge:knowledge)
+├── scripts/
+│   └── merge-perguntas-into-knowledge.mjs
 ├── lib/
 │   ├── inference/
 │   │   ├── engine.ts           # Orquestração, entropia, ranking, runEngine
@@ -88,6 +91,7 @@ Tipos: `@types/node` ^22.13.10, `@types/react` ^19.0.12, `@types/react-dom` ^19.
 ## Conhecimento
 
 - Fonte: `data/knowledge.json` — `questions`, `careers` e `rules` (uma regra liga `careerId` + `questionId` com `weight`).
+- O ficheiro `perguntas.json` (árvore `sim`/`nao`/`talvez`) é fundido na base com `npm run merge:knowledge`, que gera `q_fluxo_*`, carreiras-folha e `r_fluxo_*` a partir de um caminho por carreira.
 - Conteúdo moderado: modelos `ModeratorCareer` e `ModeratorRule` no `schema.prisma`, mesclados em `getEffectiveKnowledgeBase()`.
 
 ## Rodar localmente
@@ -142,4 +146,5 @@ npm run start      # produção (após build)
 npm run lint       # ESLint
 npm run typecheck  # prisma generate + tsc --noEmit
 npm run db:push    # sincroniza schema Prisma → MongoDB
+npm run merge:knowledge  # funde perguntas.json → data/knowledge.json
 ```

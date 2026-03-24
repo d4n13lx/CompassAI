@@ -18,14 +18,21 @@ const PRIOR_ANSWER: Record<QuizAnswer, number> = {
 };
 
 /** Gap mínimo entre 1º e 2º (scores normalizados) para propor conclusão */
-const MIN_GAP_CONCLUSION = 0.12;
-const MIN_TOP_SCORE = 0.38;
-const MAX_QUESTIONS_SAFETY = 40;
+const MIN_GAP_CONCLUSION = 0.06;
+/** Com muitas carreiras/regras (fluxo completo), o 1º lugar raramente passa de ~0.35 sem centenas de perguntas. */
+const MIN_TOP_SCORE = 0.14;
+/** Inclui perguntas do fluxo completo (`q_fluxo_*`) além das perguntas base. */
+const MAX_QUESTIONS_SAFETY = 120;
 
-function maxScoreForCareer(kb: KnowledgeBase, careerId: string): number {
-  return kb.rules
+/**
+ * Pontuação máxima teórica se cada resposta alinhar com a regra (Sim em peso > 0, Não em peso < 0).
+ * Não usar soma dos pesos brutos: mistura de +5 e -5 pode dar ≤ 0 e quebrava a normalização.
+ */
+function maxPossibleRawForCareer(kb: KnowledgeBase, careerId: string): number {
+  const sum = kb.rules
     .filter((r) => r.careerId === careerId)
-    .reduce((s, r) => s + r.weight, 0);
+    .reduce((s, r) => s + Math.abs(r.weight), 0);
+  return Math.max(sum, 1e-9);
 }
 
 /** Score bruto vem do encadeamento para frente (soma das contribuições das regras disparadas). */
@@ -34,8 +41,7 @@ function normalizedScoreFromFcRaw(
   careerId: string,
   rawByCareer: Record<string, number>
 ): number {
-  const max = maxScoreForCareer(kb, careerId);
-  if (max <= 0) return 0;
+  const max = maxPossibleRawForCareer(kb, careerId);
   return (rawByCareer[careerId] ?? 0) / max;
 }
 
@@ -66,7 +72,7 @@ function buildRanking(
       ...r,
       probabilidade: positive[i]! / sum
     }))
-    .sort((a, b) => b.probabilidade - a.probabilidade)
+    .sort((a, b) => b.scoreNormalizado - a.scoreNormalizado)
     .slice(0, topN);
 }
 
@@ -172,7 +178,18 @@ function decideStatus(
     return { status: "conclusao_encontrada", carreiraProposta: first.nome };
   }
 
-  if (first && !second && first.scoreNormalizado >= MIN_TOP_SCORE + 0.05) {
+  if (first && !second && first.scoreNormalizado >= MIN_TOP_SCORE + 0.02) {
+    return { status: "conclusao_encontrada", carreiraProposta: first.nome };
+  }
+
+  /** Com base grande, após várias respostas o líder costuma estabilizar — conclui sem exigir gap enorme. */
+  if (
+    first &&
+    second &&
+    countAnswered(state) >= 14 &&
+    first.scoreNormalizado >= MIN_TOP_SCORE &&
+    first.scoreNormalizado - second.scoreNormalizado >= 0.03
+  ) {
     return { status: "conclusao_encontrada", carreiraProposta: first.nome };
   }
 
