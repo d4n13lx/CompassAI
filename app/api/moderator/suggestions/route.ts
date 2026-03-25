@@ -147,9 +147,16 @@ export async function POST(request: Request) {
       weight: f.answer === "yes" ? 3 : f.answer === "maybe" ? 1 : -3
     }));
 
-  if (approvedRules.length > 0) {
-    await prisma.moderatorRule.createMany({
-      data: approvedRules
+  for (const r of approvedRules) {
+    await prisma.moderatorRule.upsert({
+      where: {
+        careerId_questionId: {
+          careerId: r.careerId,
+          questionId: r.questionId
+        }
+      },
+      create: r,
+      update: { weight: r.weight }
     });
   }
 

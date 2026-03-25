@@ -38,9 +38,11 @@ model ModeratorCareer {
 
 /// Regras aprovadas pelo moderador.
 model ModeratorRule {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  careerId  String   @db.ObjectId
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  careerId   String   @db.ObjectId
   questionId String
-  weight    Int
-  createdAt DateTime @default(now())
+  weight     Int
+  createdAt  DateTime @default(now())
+
+  @@unique([careerId, questionId])
 }
